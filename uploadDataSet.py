@@ -1,10 +1,12 @@
-# pands-project2021
-# Programming and Scripting 2021
-# Author : Conor McCaffrey
 
 import pandas as pd
 
 # Upload our dataset and add some structure to it
-names = ['SepalLength','SepalWidth','PetalLength','PetalWidth','Class'] # from researching the dataset, I found what each column of data represents and wanted to reflect this in the dataset
-data = pd.read_csv('iris.data', names = names)  # reading in the data file and applying our column names
-print(data.head())
+data = pd.read_csv('iris.data', header=None)  # reading in the data file 
+data.columns = ['SepalLength_Cm','SepalWidth_Cm','PetalLength_Cm','PetalWidth_Cm','Class'] # adding column names to files using examples as seen in https://stackoverflow.com/questions/35415241/adding-column-names-to-csv-file-python
+#print(data) # to confirm that we have uploaded the dataset without any issues
+
+# carrying out some basic functions to test the flexibility of the dataset (i.e to manipulations)
+print(data.head(8))  # obtained from https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/  printing top 8 rows
+print(data.sample(20))  # obtained from https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/ printing 20 random samples
+print(data.shape) # finding out more attributes of the dataset structure, this time the number of rows and columns (this also works in verifying we have all the data)
