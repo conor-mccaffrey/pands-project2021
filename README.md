@@ -1,6 +1,7 @@
 # Project for Programming and Scripting module GMIT 2021 (pands-project 2021)
 ## Author : Conor McCaffrey
 ![Iris_Flower](https://i.imgur.com/v3zQOXw.jpg)
+
 The Iris Flower [source = Dr Shahin Rostam, R.O.S.T.A.M. 2020. Part 1 - Dataset Analysis. [Online]. [17 March 2021]. Available from: https://datacrayon.com/posts/machine-learning/ml-with-kaggle/machine-learning-with-kaggle-kernels-part-1/ ] 
 
 
@@ -24,6 +25,7 @@ The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher [1
 The measurements obtained were used to create a linear discriminant model to classify the species [4]. The dataset has become commonplace in computer science, in particlar pattern recognition literature [3]. The Iris Fischer Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn [5]
 
 ![1_uo6VfVH87jRjMZWVdwq3Vw](https://i.imgur.com/UJsxRwe.png)
+
 Overview of Petal and Sepal on Iris Flower [Source = https://medium.com/@Nivitus./iris-flower-classification-machine-learning-d4e337140fa4]
 
 I intend to use this dataset to demonstate my knowledge of Python, gained throughout the module. I will, in particular, be using the Pandas, Numpy, Matplotlib and perhaps Seabron modules throughout the project. These modules will be installed when required.
