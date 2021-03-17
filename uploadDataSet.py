@@ -1,3 +1,7 @@
+# pands-project2021
+# Programming and Scripting 2021
+# Author : Conor McCaffrey
+
 import pandas as pd
 
 # Upload our dataset and add some structure to it
