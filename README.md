@@ -41,7 +41,38 @@ To maintain structure and organisation during the project, I have set out a proj
 
 #### Importing Libraries
 
-#### Addition of Dataset to Repository
+To begin, I first imported the libraries I believed would be beneficial to visually describing the dataset.
+
+```Python
+import numpy as np
+import pandas as pd
+import sys
+import matplotlib as mpl
+import os
+import matplotlib.pyplot as plt
+import seaborn as sbn
+from PIL import Image # this lets us convert images into arrays
+import matplotlib.patches as mpatches # needed for waffle charts
+```
+The libraries I imported are all quite standard for data visualisation, with perhaps Image (from PIL) (6) and matplotlib.patches being the exception. I have imported these module to have the option of creating arrays from images and waffle charts. I will decide later in the project if they are needed or not but just to have the option.
+
+
+
+#### Download and Addition of Dataset to Repository
+
+The CSV file of the Iris Fisher Dataset was retrieved from the UCI Machine Learning Repository and saved locally (3). The CSV file was read into our repository usind the Pandas 'read_csv' method. Column names were added inorder to provide some structre to the dataset to faciliate downstream manipulations. I also added 'cm' to each column name just to hghlight the measurement were made in centimetres when compiling the data.
+
+```Python
+# Upload our dataset and add some structure to it
+data = pd.read_csv('iris.data', header=None)  # reading in the data file 
+data.columns = ['SepalLength_cm','SepalWidth_cm','PetalLength_cm','PetalWidth_cm','Class'] # adding column names to files
+
+# carrying out some basic functions to test the flexibility of the dataset (i.e to manipulations)
+#print(data.head(8)) # print the top 8 rows
+#print(data.sample(20)) # print 20 random samples
+#print(data.shape) # finding out more attributes of the dataset structure, this time the number of rows and columns (this also works in verifying we have all the data)
+```
+I've included some commented-out code that I used to verify the dataset was read in correctly. These were simple data manipulations to test the robustness of the data to user queries.
 
 ####
 
@@ -59,6 +90,10 @@ To maintain structure and organisation during the project, I have set out a proj
     4. Santos, Rafael. 2019. Data Science Example - Iris dataset. [Online]. [17 March 2021]. Available from: http://www.lac.inpe.br/~rafael.santos/Docs/CAP394/WholeStory-Iris.html
     
     5. Dphansen (N.D.). Iris demo data set for tutorials - SQL machine learning. [online] docs.microsoft.com. Available at: https://docs.microsoft.com/en-us/sql/machine-learning/tutorials/demo-data-iris-in-sql?view=sql-server-ver15 [Accessed 17 Mar. 2021].
+    
+    6. Readthedocs.io. (2011). Image Module — Pillow (PIL Fork) 6.2.1 documentation. [online] Available at: https://pillow.readthedocs.io/en/stable/reference/Image.html.
+
+ 
 
 ‌
 
