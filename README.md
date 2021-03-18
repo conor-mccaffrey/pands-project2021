@@ -60,22 +60,24 @@ The libraries I imported are all quite standard for data visualisation, with per
 
 #### Download and Addition of Dataset to Repository
 
-The CSV file of the Iris Fisher Dataset was retrieved from the UCI Machine Learning Repository and saved locally (3). The CSV file was read into our repository usind the Pandas 'read_csv' method. Column names were added inorder to provide some structre to the dataset to faciliate downstream manipulations. I also added 'cm' to each column name just to hghlight the measurement were made in centimetres when compiling the data.
+The CSV file of the Iris Fisher Dataset was retrieved from the UCI Machine Learning Repository and saved locally (3). The CSV file was read into our repository usind the Pandas 'read_csv' method. Column names were added in order to provide some structre to the dataset to faciliate downstream manipulations. I also added 'cm' to each column name just to highlight the measurement were made in centimetres when compiling the data. I added this block of code in a try/except block to demonstrate further learning and also to confirm to the user their upload was successful.
 
 ```Python
-# Upload our dataset and add some structure to it
-data = pd.read_csv('iris.data', header=None)  # reading in the data file 
-data.columns = ['SepalLength_cm','SepalWidth_cm','PetalLength_cm','PetalWidth_cm','Class'] # adding column names to files
-
-# carrying out some basic functions to test the flexibility of the dataset (i.e to manipulations)
-#print(data.head(8)) # print the top 8 rows
-#print(data.sample(20)) # print 20 random samples
-#print(data.shape) # finding out more attributes of the dataset structure, this time the number of rows and columns (this also works in verifying we have all the data)
+# Upload our dataset and add some structure to it (wrapped in try/except block)
+try:
+    data = pd.read_csv('iris.data', header=None)  # reading in the data file 
+    data.columns = ['SepalLength_cm','SepalWidth_cm','PetalLength_cm','PetalWidth_cm','Class'] # adding column names to files
+except BaseException as Exception:  # a blanket approach for catching errors, not the best way normally but sufficent in this scenario I believe
+    print('We have hit a snag, try that again')
+else:
+    print('Upload of dataset successful') # to confirm that we have uploaded the dataset without any issues
+    
 ```
-I've included some commented-out code that I used to verify the dataset was read in correctly. These were simple data manipulations to test the robustness of the data to user queries. For example, 'data.shape' will print out the number of rows and columns we have in our dataset. Prior knowledge of the datset structure allows this function to confirm you have uploaded the dataset correctly. 
+I thought of including some commented-out code that I could use to verify the dataset was read in correctly. These were simple data manipulations to test the robustness of the data to user queries. For example, 'data.shape' would print out the number of rows and columns we have in our dataset. Prior knowledge of the datset structure allows this function to confirm you have uploaded the dataset correctly. I then decided instead to wrap the code in a try/except block and move the code I was going to use into the 'variablesSummary.py' file for neatness.
 
 #### Exploratory analysis of the Iris Fisher Dataset
 
+Now it is time to gain a high-level understanding of the data we have. The logical first step here then is to calculate common 
 
 
 
@@ -93,6 +95,8 @@ I've included some commented-out code that I used to verify the dataset was read
     5. Dphansen (N.D.). Iris demo data set for tutorials - SQL machine learning. [online] docs.microsoft.com. Available at: https://docs.microsoft.com/en-us/sql/machine-learning/tutorials/demo-data-iris-in-sql?view=sql-server-ver15 [Accessed 17 Mar. 2021].
     
     6. Readthedocs.io. (2011). Image Module — Pillow (PIL Fork) 6.2.1 documentation. [online] Available at: https://pillow.readthedocs.io/en/stable/reference/Image.html.
+    
+    7. Stack Abuse. Writing to a File with Python’s print() Function. [online] Available at: https://stackabuse.com/writing-to-a-file-with-pythons-print-function/ [Accessed 18 Mar. 2021] 
 
  
 
