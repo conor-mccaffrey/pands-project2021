@@ -3,7 +3,7 @@ import pandas as pd
 
 # Upload our dataset and add some structure to it
 data = pd.read_csv('iris.data', header=None)  # reading in the data file 
-data.columns = ['SepalLength_Cm','SepalWidth_Cm','PetalLength_Cm','PetalWidth_Cm','Class'] # adding column names to files using examples as seen in https://stackoverflow.com/questions/35415241/adding-column-names-to-csv-file-python
+data.columns = ['SepalLength_cm','SepalWidth_cm','PetalLength_cm','PetalWidth_cm','Class'] # adding column names to files using examples as seen in https://stackoverflow.com/questions/35415241/adding-column-names-to-csv-file-python
 #print(data) # to confirm that we have uploaded the dataset without any issues
 
 # carrying out some basic functions to test the flexibility of the dataset (i.e to manipulations)
