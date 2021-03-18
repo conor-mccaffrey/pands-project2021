@@ -72,9 +72,10 @@ data.columns = ['SepalLength_cm','SepalWidth_cm','PetalLength_cm','PetalWidth_cm
 #print(data.sample(20)) # print 20 random samples
 #print(data.shape) # finding out more attributes of the dataset structure, this time the number of rows and columns (this also works in verifying we have all the data)
 ```
-I've included some commented-out code that I used to verify the dataset was read in correctly. These were simple data manipulations to test the robustness of the data to user queries.
+I've included some commented-out code that I used to verify the dataset was read in correctly. These were simple data manipulations to test the robustness of the data to user queries. For example, 'data.shape' will print out the number of rows and columns we have in our dataset. Prior knowledge of the datset structure allows this function to confirm you have uploaded the dataset correctly. 
 
-####
+#### Exploratory analysis of the Iris Fisher Dataset
+
 
 
 
