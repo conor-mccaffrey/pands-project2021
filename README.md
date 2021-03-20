@@ -18,7 +18,7 @@ I have structured the README file as follows:
 
 The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher [1]. The dataset was desribed in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attibuting the actual collection of the data to Dr. Edgar Anderson [1]. The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' [2]. It is important to note that these measurements are in centimetres (cm). One class (sertosa) is linerally separable from the other two classes [3].
 
-The measurements obtained were used to create a linear discriminant model to classify the species [4]. The dataset has become commonplace in computer science, in particlar pattern recognition literature [3]. The Iris Fischer Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn [5]
+The measurements obtained were used to create a linear discriminant model to classify the species [4]. The dataset has become commonplace in computer science, in particlar pattern recognition literature and data visualisations [3]. The Iris Fischer Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn [5]. Further demonstrating the modern application of the Iris dataset, it is being increasingly incorporated into advances in machine leanring (ML) teachings (10,11). 
 
 ![1_uo6VfVH87jRjMZWVdwq3Vw](https://i.imgur.com/UJsxRwe.png)
 
@@ -204,6 +204,7 @@ The take-away points of this are:
 * The mean values of Sepal length and Sepal width are higher than their Petal counterparts. This would immediately suggest that Sepals are larger than Petals.
 * The standard deviations of the Sepal length and Sepal width are quite lower than the Petal length and Petal width results. This suggests that despite the higher values for Sepals, there is more variance within the Petal results. This gives me greater confidence in the significance of our findings for the 'mean' results.
 * The min/max values tie in with our hypothesis now that Sepals are larger than Petals
+* The median values (50%) suggests the distibution in the Sepal data may be slightly positively skewed with perhaps negative skew being displayed in the Petal data but later analyses will review more on this.
 * We can see that there is a strong positive coorelation between Petal length and Petal width and no real correlation between Sepal length and Sepal width. This suggests that any major insights we find might be related to petals more so than sepals. We will see later on. 
   
 
@@ -229,6 +230,14 @@ The take-away points of this are:
     8. Avuluri, V.S.R. (2019). Exploratory Data Analysis of IRIS Data Set Using Python. [online] Medium. Available at: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d [Accessed 20 Mar. 2021].
     
     9. kaggle.com. Simple analysis of Iris dataset. [online] Available at: https://www.kaggle.com/danalexandru/simple-analysis-of-iris-dataset [Accessed 20 Mar. 2021].
+    
+    10. kaggle.com. Iris Dataset ML and Deep Learning from scratch. [online] Available at: https://www.kaggle.com/kamrankausar/iris-dataset-ml-and-deep-learning-from-scratch [Accessed 20 Mar. 2021].
+    
+    11. datarepository.wolframcloud.com. Machine Learning | Wolfram Data Repository. [online] Available at: https://datarepository.wolframcloud.com/category/Machine-Learning [Accessed 20 Mar. 2021].
+
+
+
+ 
 
 
 
