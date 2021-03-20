@@ -103,9 +103,9 @@ I have added a lot of commments in order to describe step-by-step the working of
 I began by changing the standard output (adapted from reference 7) so that our code would re-direct to a newly created file called 'variablesSummary.txt'. I then made sure to reset the standard output at the end of our program. I called the 'info()' method in order to discern basic structural information from our dataset. This includes the number of columns/rows, the datatypes present and also, importantly, the presence/absence of NULL values in our data. I called the '.value_counts()' method to confirm the number of values in each grouping. The 'describe()' method provides a tabular summary of basic statistical features which will be explained in greater detail later in the section.
 
 The 'corr()' method is an extra piece of information I thought to be important to include as it tells us how correlated secitons of our data is, i.e does an increase in one parameter result in an increase (positive correlation) or a decrease (negative correlation) in another parameter (9). In theory:
-'1' is total positive correlation
-'0' is no linear correlation
-'-1' is total negative coorelation
+* '1' is total positive correlation
+* '0' is no linear correlation
+* '-1' is total negative coorelation
 
 ##### Basic Structural Information of Dataset
 
@@ -175,6 +175,36 @@ In order to verify that simple manipulations could be carried out on our dataset
 ```
 
 We can see that the methods worked as expected from analysing the 'ID' numbers. The top 8 rows were printed from our first method and a 20 random samples were printed from our second method.
+
+##### Summary of each Variable in the Iris Fisher Dataset
+This step is the 'meat' of the first section in our project. I used the 'describe()' method in order to retieve a tabulated statistical summary of our data. The main points of interest for me are the mean, standard deviation (std), the minimum value (min) and the maximum value(max). I have also called the 'corr()' method in order to determine if there is an correlation between certain parameters of our data (as described in the earlier section)
+
+````
+       SepalLength_cm  SepalWidth_cm  PetalLength_cm  PetalWidth_cm
+count      150.000000     150.000000      150.000000     150.000000
+mean         5.843333       3.054000        3.758667       1.198667
+std          0.828066       0.433594        1.764420       0.763161
+min          4.300000       2.000000        1.000000       0.100000
+25%          5.100000       2.800000        1.600000       0.300000
+50%          5.800000       3.000000        4.350000       1.300000
+75%          6.400000       3.300000        5.100000       1.800000
+max          7.900000       4.400000        6.900000       2.500000 
+
+                SepalLength_cm  SepalWidth_cm  PetalLength_cm  PetalWidth_cm
+SepalLength_cm        1.000000      -0.109369        0.871754       0.817954
+SepalWidth_cm        -0.109369       1.000000       -0.420516      -0.356544
+PetalLength_cm        0.871754      -0.420516        1.000000       0.962757
+PetalWidth_cm         0.817954      -0.356544        0.962757       1.000000
+
+````
+
+The take-away points of this are :
+
+* We have 150 values (counts) for each class, this tells us all data has been read into the calculation.
+* The mean values of Sepal length and Sepal width are higher than their Petal counterparts. This would immediately suggest that Sepals are larger than Petals.
+* The standard deviations of the Sepal length and Sepal Width are quite lower than the Petal length and Petal width results. This suggets that despite the higher values for Sepals, there is more variance within the Petal results. This gives me greater confidence in the significance of our findings for the 'mean' results.
+* The min/max values tie in with our hypothesis now that Sepals are larger than Petals
+* We can see that there is a strong positive coorelation between Petal length and Petal width and no real correlation between Sepal length and Sepal width. This suggests that any major descoveries we make might be related to petals more so than sepals. We will see later on. 
 
 ## Conclusion
 
