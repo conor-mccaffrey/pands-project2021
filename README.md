@@ -77,7 +77,7 @@ I thought of including some commented-out code that I could use to verify the da
 
 #### Exploratory analysis of the Iris Fisher Dataset
 
-Now it is time to gain a high-level understanding of the data we have. The logical first step here then is to investigate the structure of our data and to calculate generaly statistical features such as mean, standard deviation, max/min values and interquartile ranges. 
+Now it is time to gain a high-level understanding of the data we have. The logical first step here then is to investigate the structure of our data and to calculate general statistical features such as mean, standard deviation, max/min values and interquartile ranges. 
 
 
 
