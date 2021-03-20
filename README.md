@@ -77,8 +77,35 @@ I thought of including some commented-out code that I could use to verify the da
 
 #### Exploratory analysis of the Iris Fisher Dataset
 
-Now it is time to gain a high-level understanding of the data we have. The logical first step here then is to investigate the structure of our data and to calculate general statistical features such as mean, standard deviation, max/min values and interquartile ranges. 
+Now it is time to gain a high-level understanding of the data we have. The logical first step here then is to investigate the structure of our data and to calculate general statistical features such as mean, standard deviation, max/min values and interquartile ranges. We will also look at testing the robustness of our data in order to confirm we can carry out queries on the dataset. I included the newline character after each 'print' function in order to spearate the data to make it neater for the end-user.
 
+```Python
+
+from uploadDataSet import data  # found this idea on kite.com (importing the output of one Python file into another Python file).
+# This wont be needed when compiling the final program but it's good to have now when performing separate tasks
+
+
+original_stdout = sys.stdout # Save a reference to the original standard output
+
+with open('variablesSummary.txt', 'w') as text_file: # creating a new .txt file called 'variablesSummary.txt' to store our results and referring to it as 'text_file'
+    sys.stdout = text_file # Change the standard output to the file we have just created.  (idea adapted from Stack Abuse (see reference 7))
+    print(data.info(), '\n') # print basic info on our dataset such as structure and datatypes, end with a newline character to separate next set of data
+    print("Instances of each sample type") 
+    print(data["Class"].value_counts(), '\n') # Number of instances in each class (obtained from reference 8)
+    print(data.head(8), '\n') # print 8 top rows in dataset
+    print(data.sample(20), '\n')  # print 20 random samples
+    print(data.describe(), '\n') # This will output basic exploratory analyses (statistial summaries) of the dataset.
+    print(data.corr()) # This will display the correlatiopn betweeen 
+    
+sys.stdout = original_stdout # Reset the standard output to its original value to avoid adding data we dont want to newly created file
+```
+I have added a lot of commments in order to describe step-by-step the working of the program 'variablesSummary.py'. There are some main points to highlight.
+I began by changing the standard output (adapted from reference 7) so that our code would re-direct to a newly created file called 'variablesSummary.txt'. I then made sure to reset the standard output at the end of our program. I called the 'info()' method in order to discern basic structural information from our dataset. This includes the number of columns/rows, the datatypes present and also, importantly, the presence/absence of NULL values in our data. I called the '.value_counts()' method to confirm the number of values in each grouping. The 'describe()' method provides a tabular summary of basic statistical features which will be explained in greater detail later in the section.
+
+The 'corr()' method is an extra piece of information I thought to be important to include as it tells us how correlated secitons of our data is, i.e does an increase in one parameter result in an increase (positive correlation) or a decrease (negative correlation) in another parameter. In theory:
+'1' is total positive correlation
+'0' is no linear correlation
+'-1' is total negative coorelation
 
 
 ## Conclusion
