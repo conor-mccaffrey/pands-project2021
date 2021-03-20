@@ -27,9 +27,10 @@ Overview of Petal and Sepal on Iris Flower [Source = https://medium.com/@Nivitus
 I intend to use this dataset to demonstrate my knowledge of Python, gained throughout the module. I will, in particular, be using the Pandas, Numpy, Matplotlib and perhaps Seabron modules throughout the project. These modules will be installed when required.
 
 The overall goal is to use these modules (and by extension, Python) to describe the Iris dataset in detail and, display visually, certain attributes of the data which I believe are important to highlight. By doing this I will also, in essence, provide evidence of the suitability of Python towards analysing large datasets.
+
 ## Investigation of the Fisher's Iris Data Set  
 
-#### Project Plan
+### Project Plan
 
 To maintain structure and organisation during the project, I have set out a project plan for the investigation of the data-set. This is to ensure focus during the project and to avoid going down any rabbit holes.
 
@@ -39,7 +40,7 @@ To maintain structure and organisation during the project, I have set out a proj
     4. I will then consider what type of analysis is relavant for this data set and investigate how to carry it out, drawing on various resources which will be references. This work will be stored in various different files.
     5. I will update the README file as I progress, and then compile all my work into a program called 'analysis.py'
 
-#### Importing Libraries
+### Importing Libraries
 
 To begin, I first imported the libraries I believed would be beneficial to visually describing the dataset.
 
@@ -198,13 +199,13 @@ PetalWidth_cm         0.817954      -0.356544        0.962757       1.000000
 
 ````
 
-The take-away points of this are :
+The take-away points of this are:
 
-* We have 150 values (counts) for each class, this tells us all data has been read into the calculation.
+* We have 150 values (counts) for each class, this tells us all data has been read into the calculation based on our previous results.
 * The mean values of Sepal length and Sepal width are higher than their Petal counterparts. This would immediately suggest that Sepals are larger than Petals.
-* The standard deviations of the Sepal length and Sepal Width are quite lower than the Petal length and Petal width results. This suggets that despite the higher values for Sepals, there is more variance within the Petal results. This gives me greater confidence in the significance of our findings for the 'mean' results.
+* The standard deviations of the Sepal length and Sepal width are quite lower than the Petal length and Petal width results. This suggests that despite the higher values for Sepals, there is more variance within the Petal results. This gives me greater confidence in the significance of our findings for the 'mean' results.
 * The min/max values tie in with our hypothesis now that Sepals are larger than Petals
-* We can see that there is a strong positive coorelation between Petal length and Petal width and no real correlation between Sepal length and Sepal width. This suggests that any major descoveries we make might be related to petals more so than sepals. We will see later on. 
+* We can see that there is a strong positive coorelation between Petal length and Petal width and no real correlation between Sepal length and Sepal width. This suggests that any major insights we find might be related to petals more so than sepals. We will see later on. 
 
 ## Conclusion
 

@@ -5,6 +5,7 @@ import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.stats as stats
+import numpy as np
 
 
 from uploadDataSet import data  # found this idea on kite.com (importing the output of one Python file into another Python file).
@@ -23,8 +24,6 @@ with open('variablesSummary.txt', 'w') as text_file: # creating a new .txt file 
     print(data.describe(), '\n') # This will output basic exploratory analyses (statistial summaries) of the dataset.
     print(data.corr()) # This will display the correlatiopn betweeen 
     
-stats.ttest_ind(a='SepalLength_cm',b='PetalLength_cm',equal_var=False)
-
 
 sys.stdout = original_stdout # Reset the standard output to its original value to avoid adding data we dont want to newly created file
 
