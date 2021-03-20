@@ -17,6 +17,3 @@ except BaseException as Exception:
     print('We have hit a snag, try that again')
 else:
     print('Upload of dataset successful') # to confirm that we have uploaded the dataset without any issues
-    print(data.head(8)) 
-    print(data.sample(20))  
-    print(data.shape) # finding out more attributes of the dataset structure, this time the number of rows and columns (this also works in verifying we have all the data)

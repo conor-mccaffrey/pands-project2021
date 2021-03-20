@@ -16,7 +16,7 @@ I have structured the README file as follows:
 
 ## Overview of Iris Dataset, it's attributes, and it's application to Python
 
-The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher [1]. The dataset was desribed in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attibuting the actual collection of the data to Dr. Edgar Anderson [1]. The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' [2]. It is important to note that these measurements are in centimetres (cm). Each class is linerally separable from the other two classes [3].
+The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher [1]. The dataset was desribed in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attibuting the actual collection of the data to Dr. Edgar Anderson [1]. The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' [2]. It is important to note that these measurements are in centimetres (cm). One class (sertosa) is linerally separable from the other two classes [3].
 
 The measurements obtained were used to create a linear discriminant model to classify the species [4]. The dataset has become commonplace in computer science, in particlar pattern recognition literature [3]. The Iris Fischer Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn [5]
 
@@ -24,7 +24,7 @@ The measurements obtained were used to create a linear discriminant model to cla
 
 Overview of Petal and Sepal on Iris Flower [Source = https://medium.com/@Nivitus./iris-flower-classification-machine-learning-d4e337140fa4]
 
-I intend to use this dataset to demonstate my knowledge of Python, gained throughout the module. I will, in particular, be using the Pandas, Numpy, Matplotlib and perhaps Seabron modules throughout the project. These modules will be installed when required.
+I intend to use this dataset to demonstrate my knowledge of Python, gained throughout the module. I will, in particular, be using the Pandas, Numpy, Matplotlib and perhaps Seabron modules throughout the project. These modules will be installed when required.
 
 The overall goal is to use these modules (and by extension, Python) to describe the Iris dataset in detail and, display visually, certain attributes of the data which I believe are important to highlight. By doing this I will also, in essence, provide evidence of the suitability of Python towards analysing large datasets.
 ## Investigation of the Fisher's Iris Data Set  
@@ -73,11 +73,11 @@ else:
     print('Upload of dataset successful') # to confirm that we have uploaded the dataset without any issues
     
 ```
-I thought of including some commented-out code that I could use to verify the dataset was read in correctly. These were simple data manipulations to test the robustness of the data to user queries. For example, 'data.shape' would print out the number of rows and columns we have in our dataset. Prior knowledge of the datset structure allows this function to confirm you have uploaded the dataset correctly. I then decided instead to wrap the code in a try/except block and move the code I was going to use into the 'variablesSummary.py' file for neatness.
+I thought of including some commented-out code that I could use to verify the dataset was read in correctly. These were simple data manipulations to test the robustness of the data to user queries. For example, 'data.head(8)' would print out the top 8 rows of our data. Prior knowledge of the datset structure allows this function to confirm you have uploaded the dataset correctly. I then decided instead to wrap the code in a try/except block and move the code I was going to use into the 'variablesSummary.py' file for neatness.
 
 #### Exploratory analysis of the Iris Fisher Dataset
 
-Now it is time to gain a high-level understanding of the data we have. The logical first step here then is to calculate common 
+Now it is time to gain a high-level understanding of the data we have. The logical first step here then is to investigate the structure of our data and to calculate generaly statistical features such as mean, standard deviation, max/min values and interquartile ranges. 
 
 
 
@@ -97,6 +97,11 @@ Now it is time to gain a high-level understanding of the data we have. The logic
     6. Readthedocs.io. (2011). Image Module — Pillow (PIL Fork) 6.2.1 documentation. [online] Available at: https://pillow.readthedocs.io/en/stable/reference/Image.html.
     
     7. Stack Abuse. Writing to a File with Python’s print() Function. [online] Available at: https://stackabuse.com/writing-to-a-file-with-pythons-print-function/ [Accessed 18 Mar. 2021] 
+    
+    8. Avuluri, V.S.R. (2019). Exploratory Data Analysis of IRIS Data Set Using Python. [online] Medium. Available at: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d [Accessed 20 Mar. 2021].
+
+
+ 
 
  
 
