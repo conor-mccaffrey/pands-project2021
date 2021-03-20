@@ -102,11 +102,79 @@ sys.stdout = original_stdout # Reset the standard output to its original value t
 I have added a lot of commments in order to describe step-by-step the working of the program 'variablesSummary.py'. There are some main points to highlight.
 I began by changing the standard output (adapted from reference 7) so that our code would re-direct to a newly created file called 'variablesSummary.txt'. I then made sure to reset the standard output at the end of our program. I called the 'info()' method in order to discern basic structural information from our dataset. This includes the number of columns/rows, the datatypes present and also, importantly, the presence/absence of NULL values in our data. I called the '.value_counts()' method to confirm the number of values in each grouping. The 'describe()' method provides a tabular summary of basic statistical features which will be explained in greater detail later in the section.
 
-The 'corr()' method is an extra piece of information I thought to be important to include as it tells us how correlated secitons of our data is, i.e does an increase in one parameter result in an increase (positive correlation) or a decrease (negative correlation) in another parameter. In theory:
+The 'corr()' method is an extra piece of information I thought to be important to include as it tells us how correlated secitons of our data is, i.e does an increase in one parameter result in an increase (positive correlation) or a decrease (negative correlation) in another parameter (9). In theory:
 '1' is total positive correlation
 '0' is no linear correlation
 '-1' is total negative coorelation
 
+##### Basic Structural Information of Dataset
+
+To begin, I wanted to find out the basic structure, datatypes and general information on the dataset:
+
+```
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 150 entries, 0 to 149
+Data columns (total 5 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   SepalLength_cm  150 non-null    float64
+ 1   SepalWidth_cm   150 non-null    float64
+ 2   PetalLength_cm  150 non-null    float64
+ 3   PetalWidth_cm   150 non-null    float64
+ 4   Class           150 non-null    object 
+dtypes: float64(4), object(1)
+memory usage: 6.0+ KB
+None 
+
+Instances of each sample type
+Iris-setosa        50
+Iris-virginica     50
+Iris-versicolor    50
+Name: Class, dtype: int64 
+
+```
+We can see from the resulting text that we have 150 entries and 5 columns. The values are of type 'float' and we have no NULL values, which is an important piece of information to know as otherwise are results could be skewed. The second set of data tells us we have 50 values for each class, which does not come as a surprise as we previously knew we have 150 entries, but it is always good to confirm.
+
+##### Verification of the success of basic data manipulations
+In order to verify that simple manipulations could be carried out on our dataset, I called the 'head()' and 'sample()' methods. The 'head()' method prints out the top rows in the dataset, depending on the argument you pass through. The 'sample()' method returns a random sleection of the data
+
+```
+
+   SepalLength_cm  SepalWidth_cm  PetalLength_cm  PetalWidth_cm        Class
+0             5.1            3.5             1.4            0.2  Iris-setosa
+1             4.9            3.0             1.4            0.2  Iris-setosa
+2             4.7            3.2             1.3            0.2  Iris-setosa
+3             4.6            3.1             1.5            0.2  Iris-setosa
+4             5.0            3.6             1.4            0.2  Iris-setosa
+5             5.4            3.9             1.7            0.4  Iris-setosa
+6             4.6            3.4             1.4            0.3  Iris-setosa
+7             5.0            3.4             1.5            0.2  Iris-setosa 
+
+     SepalLength_cm  SepalWidth_cm  PetalLength_cm  PetalWidth_cm            Class
+59              5.2            2.7             3.9            1.4  Iris-versicolor
+74              6.4            2.9             4.3            1.3  Iris-versicolor
+110             6.5            3.2             5.1            2.0   Iris-virginica
+26              5.0            3.4             1.6            0.4      Iris-setosa
+78              6.0            2.9             4.5            1.5  Iris-versicolor
+76              6.8            2.8             4.8            1.4  Iris-versicolor
+27              5.2            3.5             1.5            0.2      Iris-setosa
+42              4.4            3.2             1.3            0.2      Iris-setosa
+105             7.6            3.0             6.6            2.1   Iris-virginica
+139             6.9            3.1             5.4            2.1   Iris-virginica
+19              5.1            3.8             1.5            0.3      Iris-setosa
+4               5.0            3.6             1.4            0.2      Iris-setosa
+120             6.9            3.2             5.7            2.3   Iris-virginica
+124             6.7            3.3             5.7            2.1   Iris-virginica
+9               4.9            3.1             1.5            0.1      Iris-setosa
+30              4.8            3.1             1.6            0.2      Iris-setosa
+13              4.3            3.0             1.1            0.1      Iris-setosa
+126             6.2            2.8             4.8            1.8   Iris-virginica
+46              5.1            3.8             1.6            0.2      Iris-setosa
+7               5.0            3.4             1.5            0.2      Iris-setosa 
+
+```
+
+We can see that the methods worked as expected from analysing the 'ID' numbers. The top 8 rows were printed from our first method and a 20 random samples were printed from our second method.
 
 ## Conclusion
 
@@ -126,6 +194,10 @@ The 'corr()' method is an extra piece of information I thought to be important t
     7. Stack Abuse. Writing to a File with Python’s print() Function. [online] Available at: https://stackabuse.com/writing-to-a-file-with-pythons-print-function/ [Accessed 18 Mar. 2021] 
     
     8. Avuluri, V.S.R. (2019). Exploratory Data Analysis of IRIS Data Set Using Python. [online] Medium. Available at: https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d [Accessed 20 Mar. 2021].
+    
+    9. kaggle.com. Simple analysis of Iris dataset. [online] Available at: https://www.kaggle.com/danalexandru/simple-analysis-of-iris-dataset [Accessed 20 Mar. 2021].
+
+
 
 
  
