@@ -57,9 +57,8 @@ import matplotlib.patches as mpatches # needed for waffle charts
 ```
 The libraries I imported are all quite standard for data visualisation, with perhaps Image (from PIL) (6) and matplotlib.patches being the exception. I have imported these module to have the option of creating arrays from images and waffle charts. I will decide later in the project if they are needed or not but just to have the option.
 
+### Download and Addition of Dataset to Repository
 
-
-#### Download and Addition of Dataset to Repository
 
 The CSV file of the Iris Fisher Dataset was retrieved from the UCI Machine Learning Repository and saved locally (3). The CSV file was read into our repository usind the Pandas 'read_csv' method. Column names were added in order to provide some structre to the dataset to faciliate downstream manipulations. I also added 'cm' to each column name just to highlight the measurement were made in centimetres when compiling the data. I added this block of code in a try/except block to demonstrate further learning and also to confirm to the user their upload was successful.
 
@@ -76,7 +75,7 @@ else:
 ```
 I thought of including some commented-out code that I could use to verify the dataset was read in correctly. These were simple data manipulations to test the robustness of the data to user queries. For example, 'data.head(8)' would print out the top 8 rows of our data. Prior knowledge of the datset structure allows this function to confirm you have uploaded the dataset correctly. I then decided instead to wrap the code in a try/except block and move the code I was going to use into the 'variablesSummary.py' file for neatness.
 
-#### Exploratory analysis of the Iris Fisher Dataset
+### Exploratory analysis of the Iris Fisher Dataset
 
 Now it is time to gain a high-level understanding of the data we have. The logical first step here then is to investigate the structure of our data and to calculate general statistical features such as mean, standard deviation, max/min values and interquartile ranges. We will also look at testing the robustness of our data in order to confirm we can carry out queries on the dataset. I included the newline character after each 'print' function in order to spearate the data to make it neater for the end-user.
 
@@ -108,7 +107,7 @@ The 'corr()' method is an extra piece of information I thought to be important t
 * '0' is no linear correlation
 * '-1' is total negative coorelation
 
-##### Basic Structural Information of Dataset
+#### Basic Structural Information of Dataset
 
 To begin, I wanted to find out the basic structure, datatypes and general information on the dataset:
 
@@ -136,7 +135,7 @@ Name: Class, dtype: int64
 ```
 We can see from the resulting text that we have 150 entries and 5 columns. The values are of type 'float' and we have no NULL values, which is an important piece of information to know as otherwise are results could be skewed. The second set of data tells us we have 50 values for each class, which does not come as a surprise as we previously knew we have 150 entries, but it is always good to confirm.
 
-##### Verification of the success of basic data manipulations
+#### Verification of the success of basic data manipulations
 In order to verify that simple manipulations could be carried out on our dataset, I called the 'head()' and 'sample()' methods. The 'head()' method prints out the top rows in the dataset, depending on the argument you pass through. The 'sample()' method returns a random sleection of the data
 
 ```
@@ -177,7 +176,7 @@ In order to verify that simple manipulations could be carried out on our dataset
 
 We can see that the methods worked as expected from analysing the 'ID' numbers. The top 8 rows were printed from our first method and a 20 random samples were printed from our second method.
 
-##### Summary of each Variable in the Iris Fisher Dataset
+#### Summary of each Variable in the Iris Fisher Dataset
 This step is the 'meat' of the first section in our project. I used the 'describe()' method in order to retieve a tabulated statistical summary of our data. The main points of interest for me are the mean, standard deviation (std), the minimum value (min) and the maximum value(max). I have also called the 'corr()' method in order to determine if there is an correlation between certain parameters of our data (as described in the earlier section)
 
 ````
@@ -206,6 +205,9 @@ The take-away points of this are:
 * The standard deviations of the Sepal length and Sepal width are quite lower than the Petal length and Petal width results. This suggests that despite the higher values for Sepals, there is more variance within the Petal results. This gives me greater confidence in the significance of our findings for the 'mean' results.
 * The min/max values tie in with our hypothesis now that Sepals are larger than Petals
 * We can see that there is a strong positive coorelation between Petal length and Petal width and no real correlation between Sepal length and Sepal width. This suggests that any major insights we find might be related to petals more so than sepals. We will see later on. 
+  
+
+
 
 ## Conclusion
 
