@@ -16,9 +16,9 @@ I have structured the README file as follows:
 
 ## Overview of Iris Dataset, it's attributes, and it's application to Python
 
-The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher [1]. The dataset was desribed in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attibuting the actual collection of the data to Dr. Edgar Anderson [1]. The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' [2]. It is important to note that these measurements are in centimetres (cm). One class (sertosa) is linerally separable from the other two classes [3].
+The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher [1]. The dataset was described in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attributing the actual collection of the data to Dr. Edgar Anderson [1]. The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' [2]. It is important to note that these measurements are in centimetres (cm). One class (sertosa) is linerally separable from the other two classes [3].
 
-The measurements obtained were used to create a linear discriminant model to classify the species [4]. The dataset has become commonplace in computer science, in particlar pattern recognition literature and data visualisations [3]. The Iris Fischer Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn [5]. Further demonstrating the modern application of the Iris dataset, it is being increasingly incorporated into advances in machine leanring (ML) teachings (10,11). 
+The measurements obtained were used to create a linear discriminant model to classify the species [4]. The dataset has become commonplace in computer science, in particlar pattern recognition literature and data visualisations [3]. The Iris Fischer Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn [5]. Further demonstrating the modern application of the Iris dataset, it is being increasingly incorporated into advances in machine learning (ML) teachings (10,11). 
 
 ![1_uo6VfVH87jRjMZWVdwq3Vw](https://i.imgur.com/UJsxRwe.png)
 
@@ -55,12 +55,12 @@ import seaborn as sbn
 from PIL import Image # this lets us convert images into arrays
 import matplotlib.patches as mpatches # needed for waffle charts
 ```
-The libraries I imported are all quite standard for data visualisation, with perhaps Image (from PIL) (6) and matplotlib.patches being the exception. I have imported these module to have the option of creating arrays from images and waffle charts. I will decide later in the project if they are needed or not but just to have the option.
+The libraries I imported are all quite standard for data analyses and visualisation, with perhaps Image (from PIL) (6) and matplotlib.patches being the exception. I have imported these modules to have the option of creating arrays from images and waffle charts. I will decide later in the project if they are needed or not but just to have the option.
 
 ### Download and Addition of Dataset to Repository
 
 
-The CSV file of the Iris Fisher Dataset was retrieved from the UCI Machine Learning Repository and saved locally (3). The CSV file was read into our repository usind the Pandas 'read_csv' method. Column names were added in order to provide some structre to the dataset to faciliate downstream manipulations. I also added 'cm' to each column name just to highlight the measurement were made in centimetres when compiling the data. I added this block of code in a try/except block to demonstrate further learning and also to confirm to the user their upload was successful.
+The CSV file of the Iris Fisher Dataset was retrieved from the UCI Machine Learning Repository and saved locally (3). The CSV file was read into our repository using the Pandas 'read_csv' method. Column names were added in order to provide some structre to the dataset to faciliate downstream manipulations. I also added 'cm' to each column name just to highlight the measurements were made in centimetres when compiling the data. I added this block of code in a try/except block to demonstrate further learning and also to confirm to the user their upload was successful.
 
 ```Python
 # Upload our dataset and add some structure to it (wrapped in try/except block)
@@ -133,10 +133,10 @@ Iris-versicolor    50
 Name: Class, dtype: int64 
 
 ```
-We can see from the resulting text that we have 150 entries and 5 columns. The values are of type 'float' and we have no NULL values, which is an important piece of information to know as otherwise are results could be skewed. The second set of data tells us we have 50 values for each class, which does not come as a surprise as we previously knew we have 150 entries, but it is always good to confirm.
+We can see from the resulting text that we have 150 entries and 5 columns. The values are of type 'float' and we have no NULL values, which is an important piece of information to know as otherwise our results could be mis-represented. The second set of data tells us we have 50 values for each class, which does not come as a surprise as we previously knew we have 150 entries, but it is always good to confirm.
 
 #### *Verification of the success of basic data manipulations*
-In order to verify that simple manipulations could be carried out on our dataset, I called the 'head()' and 'sample()' methods. The 'head()' method prints out the top rows in the dataset, depending on the argument you pass through. The 'sample()' method returns a random sleection of the data
+In order to verify that simple manipulations could be carried out on our dataset, I called the 'head()' and 'sample()' methods. The 'head()' method prints out the top rows in the dataset, depending on the argument you pass through. The 'sample()' method returns a random selection of the data.
 
 ```
 
@@ -177,7 +177,7 @@ In order to verify that simple manipulations could be carried out on our dataset
 We can see that the methods worked as expected from analysing the 'ID' numbers. The top 8 rows were printed from our first method and a 20 random samples were printed from our second method.
 
 #### *Summary of each Variable in the Iris Fisher Dataset*
-This step is the 'meat' of the first section in our project. I used the 'describe()' method in order to retieve a tabulated statistical summary of our data. The main points of interest for me are the mean, standard deviation (std), the minimum value (min) and the maximum value(max). I have also called the 'corr()' method in order to determine if there is an correlation between certain parameters of our data (as described in the earlier section)
+This step is the 'meat' of the first section in our project. I used the 'describe()' method in order to retieve a tabulated statistical summary of our data. The main points of interest for me are the mean, standard deviation (std), the minimum value (min) and the maximum value(max). I have also called the 'corr()' method in order to determine if there is an correlation between certain parameters of our data (as previously described)
 
 ````
        SepalLength_cm  SepalWidth_cm  PetalLength_cm  PetalWidth_cm
@@ -204,7 +204,7 @@ The take-away points of this are:
 * The mean values of Sepal length and Sepal width are higher than their Petal counterparts. This would immediately suggest that Sepals are larger than Petals.
 * The standard deviations of the Sepal length and Sepal width are quite lower than the Petal length and Petal width results. This suggests that despite the higher values for Sepals, there is more variance within the Petal results. This gives me greater confidence in the significance of our findings for the 'mean' results.
 * The min/max values tie in with our hypothesis now that Sepals are larger than Petals
-* The median values (50%) suggests the distibution in the Sepal data may be slightly positively skewed with perhaps negative skew being displayed in the Petal data but later analyses will review more on this.
+* The median values (50%) suggests the distibution in the Sepal data may be slightly positively skewed with perhaps negative skew being displayed in the Petal data but later analyses will reveal more on this.
 * We can see that there is a strong positive coorelation between Petal length and Petal width and no real correlation between Sepal length and Sepal width. This suggests that any major insights we find might be related to petals more so than sepals. We will see later on. 
   
 
