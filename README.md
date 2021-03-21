@@ -238,9 +238,19 @@ The above histograms display the results for Sepal and Petal data. It is immedia
 
 #### *Subplot of all histograms*
 
-For clarity's sake, I alsmo compiled a program that would output subplots of all the histograms so far. This can be good for a quick overview of the data. 
+For clarity's sake, I also compiled a program that would display histograms of all the variants so far in one output. This can be good for a quick overview of the data. 
+
+```Python
+data.hist(figsize = (9,6))
+plt.savefig('overviewHist.png')
+
+```
+
+![overviewHist](https://i.imgur.com/zl9CzW8.png)
 
 The take-away points of this are:
+*  The Petal data has a lot more variance than the Sepal data 
+*  We may have outliers present in the Petal data that is skewing the distribution of the data 
 
 ## Conclusion
 
