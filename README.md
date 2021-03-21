@@ -265,7 +265,7 @@ correlationVariablePlot =sns.heatmap(data.corr(), annot=True, cmap='rainbow' ,sq
 plt.savefig("correlationPlot.png") # save output to 'correlationPlot.png'
 ```
 
-![correlationPlot](https://i.imgur.com/mOlKCeJ.png)
+![correlationPlot](https://i.imgur.com/Ur6GT5i.png)
 
 There is no new information here that we are not aware of previously, but it does help us confirm the strong positive coorelation between Petal length and Petal width. It also seems there may be a slight positive correlation between Sepal length and Petal length.
 
