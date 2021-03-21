@@ -228,8 +228,19 @@ plt.savefig('sepalLengthHist.png') # saving output to specified .png file
 ```
 I leaned heavily on Seaborn and Matplotlib libraries for creating the histograms. I edited the features in order to make the histograms more aesthetically pleasing and therefore more accessible for the end-user. I set different axes limits for each histogram to aid their appearance and added 'y-axis' gridlines as I did not see the benefit of 'x-axis' gridlines. I removed the density line as it is not requested for the task and changed the 'alpha' setting (from it's default of 0.5) to alter the transparancy of the graph.
 
-### **
+#### *Histogram Analyses*
+![sepalLengthHist](https://i.imgur.com/i6X0u9V.png)
+![sepalWidthHist](https://i.imgur.com/GVth4Dv.png)
+![petalLengthHist](https://i.imgur.com/ik8Ffd7.png)![petalWidthHist](https://i.imgur.com/ouqGiWe.png)
 
+
+The above histograms display the results for Sepal and Petal data. It is immediately noticable that the tabular statistical summary we produced earlier does not tell the full story and the benefits of the histrograms are clear. We can see how the distibution of the data differs between Sepal and Petal. This ties in with our findings on the standard deviation in the statistical summary. The data variance is much less pronounced in the Sepal data. We can clearly see outliers in the Petal data which may warrent further invesitgation down the line. These results in Petal data may be skewing the mean and median also to an extent. The Sepal width data depicts what appears to be almost perfect Gaussian distibution. This is unsurprising as the Sepal width data also has the lowest value for standard deviation. 
+
+#### *Subplot of all histograms*
+
+For clarity's sake, I alsmo compiled a program that would output subplots of all the histograms so far. This can be good for a quick overview of the data. 
+
+The take-away points of this are:
 
 ## Conclusion
 
