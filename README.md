@@ -207,7 +207,9 @@ The take-away points of this are:
 * The median values (50%) suggests the distibution in the Sepal data may be slightly positively skewed with perhaps negative skew being displayed in the Petal data but later analyses will reveal more on this.
 * We can see that there is a strong positive coorelation between Petal length and Petal width and no real correlation between Sepal length and Sepal width. This suggests that any major insights we find might be related to petals more so than sepals. We will see later on. 
   
+### Visualisation of the Iris Fisher Dataset
 
+#### *Analysis of each variable through Histograms*
 
 
 ## Conclusion
@@ -234,6 +236,15 @@ The take-away points of this are:
     10. kaggle.com. Iris Dataset ML and Deep Learning from scratch. [online] Available at: https://www.kaggle.com/kamrankausar/iris-dataset-ml-and-deep-learning-from-scratch [Accessed 20 Mar. 2021].
     
     11. datarepository.wolframcloud.com. Machine Learning | Wolfram Data Repository. [online] Available at: https://datarepository.wolframcloud.com/category/Machine-Learning [Accessed 20 Mar. 2021].
+    
+    12. www.nbshare.io. How to Plot a Histogram in Python. [online] Available at: https://www.nbshare.io/notebook/204214467/How-to-Plot-a-Histogram-in-Python/ [Accessed 21 Mar. 2021].
+    
+    13. matplotlib.org. Text properties and layout — Matplotlib 3.1.2 documentation. [online] Available at: https://matplotlib.org/3.1.1/tutorials/text/text_props.html.
+
+ 
+
+
+ 
 
 
 
