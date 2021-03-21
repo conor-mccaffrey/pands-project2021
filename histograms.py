@@ -20,8 +20,8 @@ plt.ylabel('Frequency')
 plt.suptitle('Sepal Length', fontsize = 12) # adding main title to histogram and setting fontsize
 plt.ylim(0,25) # setting y-axis limits
 plt.xlim(3,10) # setting x-axis limits
-plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE') # modifying grid lines so that they dont 'overpower' the data and used hex value for colour
-plt.savefig('Sepal_Length.png') # saving output to specified .png file
+plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE', axis = 'y') # modifying grid lines so that they dont 'overpower' the data and used hex value for colour
+plt.savefig('sepalLengthHist.png') # saving output to specified .png file
 
 sns.displot(data['SepalWidth_cm'], kde= False, bins = 15, color = 'yellow', edgecolor = 'orange', alpha=0.6)
 plt.xlabel('Sepal Width (cm)')
@@ -29,8 +29,8 @@ plt.ylabel('Frequency')
 plt.suptitle('Sepal Width', fontsize = 12) 
 plt.ylim(0,50) 
 plt.xlim(0,6) 
-plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE') 
-plt.savefig('Sepal_Width.png') 
+plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE', axis = 'y') 
+plt.savefig('sepalWidthHist.png') 
 
 sns.displot(data['PetalLength_cm'], kde= False, bins = 15, color = 'blue', edgecolor = 'orange', alpha=0.6)
 plt.xlabel('Petal Length (cm)')
@@ -38,8 +38,8 @@ plt.ylabel('Frequency')
 plt.suptitle('Petal Length', fontsize = 12) 
 plt.ylim(0,50) 
 plt.xlim(0,10) 
-plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE') 
-plt.savefig('Petal Length.png') 
+plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE', axis = 'y') 
+plt.savefig('petalLengthHist.png') 
 
 
 sns.displot(data['PetalWidth_cm'], kde= False, bins = 15, color = 'purple', edgecolor = 'orange', alpha=0.6)
@@ -48,5 +48,5 @@ plt.ylabel('Frequency')
 plt.suptitle('Petal Width', fontsize = 12) 
 plt.ylim(0,40) 
 plt.xlim(0,4) 
-plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE') 
-plt.savefig('Petal_Width.png') 
+plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE', axis = 'y') 
+plt.savefig('petalWidthHist.png') 
