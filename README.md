@@ -211,6 +211,25 @@ The take-away points of this are:
 
 #### *Analysis of each variable through Histograms*
 
+The next step is to be able to visually inspect our data. To achieve this, histograms of each variable (Sepal length/width, Petal length/width) were created. The histograms displayed the ranges (in cm) of each variable plotted against the frequencies. This provides additional information about the variance of the data across each variable. An example of the code is as follows : 
+
+```Python
+
+sns.displot(data['SepalLength_cm'], kde= False, bins = 15, color = 'green', edgecolor = 'orange', alpha=0.6) # setting kde as False in order to remove the density line as it is not relavant to task
+# also altered alpha value to change transparency of the graph (adapted from Reference 13)
+plt.xlabel('Sepal Length (cm)')
+plt.ylabel('Frequency')
+plt.suptitle('Sepal Length', fontsize = 12) # adding main title to histogram and setting fontsize
+plt.ylim(0,25) # setting y-axis limits
+plt.xlim(3,10) # setting x-axis limits
+plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE', axis = 'y') # modifying grid lines so that they dont 'overpower' the data and used hex value for colour
+plt.savefig('sepalLengthHist.png') # saving output to specified .png file
+
+```
+I leaned heavily on Seaborn and Matplotlib libraries for creating the histograms. I edited the features in order to make the histograms more aesthetically pleasing and therefore more accessible for the end-user. I set different axes limits for each histogram to aid their appearance and added 'y-axis' gridlines as I did not see the benefit of 'x-axis' gridlines. I removed the density line as it is not requested for the task and changed the 'alpha' setting (from it's default of 0.5) to alter the transparancy of the graph.
+
+### **
+
 
 ## Conclusion
 
