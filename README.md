@@ -234,7 +234,7 @@ I leaned heavily on Seaborn and Matplotlib libraries for creating the histograms
 ![petalLengthHist](https://i.imgur.com/ik8Ffd7.png)![petalWidthHist](https://i.imgur.com/ouqGiWe.png)
 
 
-The above histograms display the results for Sepal and Petal data. It is immediately noticable that the tabular statistical summary we produced earlier does not tell the full story and the benefits of the histrograms are clear. We can see how the distibution of the data differs between Sepal and Petal. This ties in with our findings on the standard deviation in the statistical summary. The data variance is much less pronounced in the Sepal data. We can clearly see outliers in the Petal data which may warrent further invesitgation down the line. These results in Petal data may be skewing the mean and median also to an extent. The Sepal width data depicts what appears to be almost perfect Gaussian distibution. This is unsurprising as the Sepal width data also has the lowest value for standard deviation. 
+The above histograms display the results for Sepal and Petal data. It is immediately noticable that the tabular statistical summary we produced earlier does not tell the full story and the benefits of the histograms are clear. We can see how the distribution of the data differs between Sepal and Petal. This ties in with our findings on the standard deviation in the statistical summary. The data variance is much less pronounced in the Sepal data. We can clearly see outliers in the Petal data which may warrent further invesitgation down the line. These outliers in Petal data may be skewing the mean and median also to an extent. The Sepal width data depicts what appears to be almost perfect Gaussian distibution. This is unsurprising as the Sepal width data also has the lowest value for standard deviation. 
 
 #### *Subplot of all histograms*
 
@@ -251,6 +251,23 @@ plt.savefig('overviewHist.png')
 The take-away points of this are:
 *  The Petal data has a lot more variance than the Sepal data 
 *  We may have outliers present in the Petal data that is skewing the distribution of the data 
+
+#### *Correlation Map of Data for Statistical Summary* 
+
+In order to aid in the visualisation of the correlation data from our 'variablesSummary.txt' output, it is wise to construct a heatmap of the correlation data. This was heavily drawn on Seaborn.pydata.org (reference 14). The heatmap produced provides a visual summary of the 'corr()' method output previously attained.
+
+```Python
+
+# information generated from reference 14
+correlationVariablePlot = plt.subplots(figsize=(8,8)) # setting size of output
+# setting attributes of correlation heatmap
+correlationVariablePlot =sns.heatmap(data.corr(), annot=True, cmap='rainbow' ,square=True, cbar = True, linecolor='green', robust= True)  
+plt.savefig("correlationPlot.png") # save output to 'correlationPlot.png'
+```
+
+![correlationPlot](https://i.imgur.com/mOlKCeJ.png)
+
+There is no new information here that we are not aware of previously, but it does help us confirm the strong positive coorelation between Petal length and Petal width. It also seems there may be a slight positive correlation between Sepal length and Petal length.
 
 ## Conclusion
 
@@ -280,6 +297,10 @@ The take-away points of this are:
     12. www.nbshare.io. How to Plot a Histogram in Python. [online] Available at: https://www.nbshare.io/notebook/204214467/How-to-Plot-a-Histogram-in-Python/ [Accessed 21 Mar. 2021].
     
     13. matplotlib.org. Text properties and layout — Matplotlib 3.1.2 documentation. [online] Available at: https://matplotlib.org/3.1.1/tutorials/text/text_props.html.
+   
+    14. seaborn.pydata.org. seaborn.heatmap — seaborn 0.10.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.heatmap.html.
+
+
 
  
 
