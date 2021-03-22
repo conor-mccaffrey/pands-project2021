@@ -133,7 +133,7 @@ Iris-versicolor    50
 Name: Class, dtype: int64 
 
 ```
-We can see from the resulting text that we have 150 entries and 5 columns. The values are of type 'float' and we have no NULL values, which is an important piece of information to know as otherwise our results could be mis-represented. The second set of data tells us we have 50 values for each class, which does not come as a surprise as we previously knew we have 150 entries, but it is always good to confirm.
+We can see from the resulting text that we have 150 entries and 5 columns. The values are of type 'float' and we have no NULL values, which is an important piece of information to know as otherwise our results could be mis-represented. The second set of data tells us we have 50 values for each class, which does not come as a surprise as we knew we had 150 entries, but it is always good to confirm.
 
 #### *Verification of the success of basic data manipulations*
 In order to verify that simple manipulations could be carried out on our dataset, I called the 'head()' and 'sample()' methods. The 'head()' method prints out the top rows in the dataset, depending on the argument you pass through. The 'sample()' method returns a random selection of the data.
