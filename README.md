@@ -102,7 +102,7 @@ sys.stdout = original_stdout # Reset the standard output to its original value t
 I have added a lot of commments in order to describe step-by-step the working of the program 'variablesSummary.py'. There are some main points to highlight.
 I began by changing the standard output (adapted from reference 7) so that our code would re-direct to a newly created file called 'variablesSummary.txt'. I then made sure to reset the standard output at the end of our program. I called the 'info()' method in order to discern basic structural information from our dataset. This includes the number of columns/rows, the datatypes present and also, importantly, the presence/absence of NULL values in our data. I called the '.value_counts()' method to confirm the number of values in each grouping. The 'describe()' method provides a tabular summary of basic statistical features which will be explained in greater detail later in the section.
 
-The 'corr()' method is an extra piece of information I thought to be important to include as it tells us how correlated secitons of our data is, i.e does an increase in one parameter result in an increase (positive correlation) or a decrease (negative correlation) in another parameter (9). In theory:
+The 'corr()' method is an extra piece of information I thought to be important to include as it tells us how correlated secitons of our data is, i.e does an increase in one parameter result in an increase (positive correlation) or a decrease (negative correlation) in another parameter (9). I will construct a heatmap in a later section in order to visualy examine the correlations between parameters. In theory:
 * '1' is total positive correlation
 * '0' is no linear correlation
 * '-1' is total negative coorelation
