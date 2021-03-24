@@ -271,7 +271,7 @@ There is no new information here that we are not aware of previously, but it doe
 
 #### *Test for Outliers*
 
-As a result of the earlier discussion regarding the potential presence of outliers, it is prudent to attempt to confirm if indeed outliers are present in the Petal length and Petal width data. Naturally, we will not exclude any potential outliers from later analyses but it may help our thinking in later sections.
+As a result of the earlier discussion regarding the potential presence of outliers, it is prudent to attempt to confirm if indeed outliers are present in the Petal length and Petal width data. Naturally, we will not exclude any potential outliers from later analyses but it may help our thinking in later sections. Boxplots were constructed for each variable, adapted from DEV Community (15).
 
 
 
@@ -305,6 +305,10 @@ As a result of the earlier discussion regarding the potential presence of outlie
     13. matplotlib.org. Text properties and layout — Matplotlib 3.1.2 documentation. [online] Available at: https://matplotlib.org/3.1.1/tutorials/text/text_props.html.
    
     14. seaborn.pydata.org. seaborn.heatmap — seaborn 0.10.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.heatmap.html.
+    
+    15. DEV Community. Subplotting with matplotlib and seaborn. [online] Available at: https://dev.to/thalesbruno/subplotting-with-matplotlib-and-seaborn-5ei8 [Accessed 24 Mar. 2021].
+
+
 
 
 
