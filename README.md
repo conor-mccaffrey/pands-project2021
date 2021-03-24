@@ -269,6 +269,12 @@ plt.savefig("correlationPlot.png") # save output to 'correlationPlot.png'
 
 There is no new information here that we are not aware of previously, but it does help us confirm the strong positive coorelation between Petal length and Petal width. It also seems there may be a slight positive correlation between Sepal length and Petal length.
 
+#### *Test for Outliers*
+
+As a result of the earlier discussion regarding the potential presence of outliers, it is prudent to attempt to confirm if indeed outliers are present in the Petal length and Petal width data. Naturally, we will not exclude any potential outliers from later analyses but it may help our thinking in later sections.
+
+
+
 ## Conclusion
 
 ## References
