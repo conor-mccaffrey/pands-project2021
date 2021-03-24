@@ -10,8 +10,8 @@ import seaborn as sns
 
 from uploadDataSet import data
 
-fig, axes = plt.subplots(2, 2, figsize=(12, 12))
-fig.suptitle('Boxplots of Iris Fisher Data Variables', style = 'italic',)
+fig, axes = plt.subplots(2, 2, figsize=(12, 12)) # setting layout and size of plts. 
+fig.suptitle('Boxplots of Iris Fisher Data Variables', style = 'italic') # Overall title and editing font for appearance
 
 sns.boxplot(ax=axes[0 ,0], data=data['SepalLength_cm'], x=data['Class'], y=data['SepalLength_cm'], showfliers=False)  # setting axes, boxplot position
 sns.swarmplot(ax=axes[0 ,0], data=data['SepalLength_cm'], x=data['Class'], y=data['SepalLength_cm'], color = '#554444', s=4) # constructing swarmplot as per reference 16

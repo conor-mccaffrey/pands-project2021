@@ -271,9 +271,27 @@ There is no new information here that we are not aware of previously, but it doe
 
 #### *Test for Outliers*
 
-As a result of the earlier discussion regarding the potential presence of outliers, it is prudent to attempt to confirm if indeed outliers are present in the Petal length and Petal width data. Naturally, we will not exclude any potential outliers from later analyses but it may help our thinking in later sections. Boxplots were constructed for each variable, adapted from DEV Community (15).
+As a result of the earlier discussion regarding the potential presence of outliers, it is prudent to attempt to confirm if indeed outliers are present within our dataset. We will not exclude any potential outliers from later analyses but it may help our thinking in later sections. Boxplots and swarmplots (to allow greater inspection of datapoints) were constructed for each variable, adapted from DEV Community (15). 
 
+```Python
+fig, axes = plt.subplots(2, 2, figsize=(12, 12)) # setting layout and size of plts. 
+fig.suptitle('Boxplots of Iris Fisher Data Variables', style = 'italic') # Overall title and editing font for appearance
 
+sns.boxplot(ax=axes[0 ,0], data=data['SepalLength_cm'], x=data['Class'], y=data['SepalLength_cm'], showfliers=False)  # setting axes, boxplot position
+sns.swarmplot(ax=axes[0 ,0], data=data['SepalLength_cm'], x=data['Class'], y=data['SepalLength_cm'], color = '#554444', s=4) # constructing swarmplot as per reference 16
+sns.boxplot(ax=axes[0 ,1], data=data['SepalWidth_cm'], x=data['Class'], y=data['SepalWidth_cm'], showfliers=False) # setting axes, boxplot position
+sns.swarmplot(ax=axes[0 ,1], data=data['SepalWidth_cm'], x=data['Class'], y=data['SepalWidth_cm'], color = '#0D0D0D', s=4) # adding properties to swarmplot
+sns.boxplot(ax=axes[1 ,0], data=data['PetalLength_cm'], x=data['Class'], y=data['PetalLength_cm'], showfliers=False) # setting axes, boxplot position
+sns.swarmplot(ax=axes[1 ,0], data=data['PetalLength_cm'], x=data['Class'], y=data['PetalLength_cm'], color = '#943126', s=4)
+sns.boxplot(ax=axes[1 ,1], data=data['PetalWidth_cm'], x=data['Class'], y=data['PetalWidth_cm'], showfliers=False) # setting axes, boxplot position
+sns.swarmplot(ax=axes[1 ,1], data=data['PetalWidth_cm'], x=data['Class'], y=data['PetalWidth_cm'], color = '#0E6655', s=4)
+plt.savefig('boxplots.png') # save output to new file
+```
+The code used for constructing the boxplots and swamplots were adapted from reference 15 and 17. We edited the properties of the boxplot through consultation of 'seaborn.pydata.org' (16). Boxplots and swarmplots, used concurrently, are an extremely effective method of visualising outliers. We can immediately identify datapoints that lie outside the range of ±1.5 * interquartile range (IQR), thereby allowing classification as an outlier.
+
+![boxplots](https://i.imgur.com/A03TrtN.png)
+
+We can see outliers are present in each of our variables. The iris-Virginica class contains the most pronounced outliers in Sepal width and Sepal length. We can also see the wide variance in the Virginica data across each variable. The iris-Setosa data is interesting in the fact that the Petal data is compact (excluding the two outliers in each variable) but varied in Sepal data. We can also see the wide variance of the Sepal data in general, owing in part to their larger size.
 
 ## Conclusion
 
@@ -307,6 +325,14 @@ As a result of the earlier discussion regarding the potential presence of outlie
     14. seaborn.pydata.org. seaborn.heatmap — seaborn 0.10.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.heatmap.html.
     
     15. DEV Community. Subplotting with matplotlib and seaborn. [online] Available at: https://dev.to/thalesbruno/subplotting-with-matplotlib-and-seaborn-5ei8 [Accessed 24 Mar. 2021].
+    
+    16. seaborn.pydata.org. seaborn.boxplot — seaborn 0.11.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.boxplot.html [Accessed 24 Mar. 2021].
+    
+    17. www.kite.com. Code Faster with Line-of-Code Completions, Cloudless Processing. [online] Available at: https://www.kite.com/python/docs/seaborn.swarmplot [Accessed 24 Mar. 2021].
+
+
+
+
 
 
 
