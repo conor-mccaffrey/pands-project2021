@@ -1,4 +1,4 @@
-# Histograms of each variable together
+# Histograms of each variable together for rapid visual assessment
 
 import matplotlib.pyplot as plt
 import numpy as np
