@@ -287,7 +287,7 @@ sns.boxplot(ax=axes[1 ,1], data=data['PetalWidth_cm'], x=data['Class'], y=data['
 sns.swarmplot(ax=axes[1 ,1], data=data['PetalWidth_cm'], x=data['Class'], y=data['PetalWidth_cm'], color = '#0E6655', s=4)
 plt.savefig('boxplots.png') # save output to new file
 ```
-The code used for constructing the boxplots and swamplots were adapted from reference 15 and 17. We edited the properties of the boxplot through consultation of 'seaborn.pydata.org' (16). Boxplots and swarmplots, used concurrently, are an extremely effective method of visualising outliers. We can immediately identify datapoints that lie outside the range of ±1.5 * interquartile range (IQR), thereby allowing classification as an outlier.
+The code used for constructing the boxplots and swamplots were adapted from reference 15 and 17. We edited the properties of the boxplot through consultation of 'seaborn.pydata.org' (16). Boxplots and swarmplots, used concurrently, are an extremely effective method of visualising outliers. We can immediately identify datapoints that lie outside the range of ±1.5 * interquartile range (IQR), thereby allowing classification as an outlier (18).
 
 ![boxplots](https://i.imgur.com/A03TrtN.png)
 
@@ -329,6 +329,10 @@ We can see outliers are present in each of our variables. The iris-Virginica cla
     16. seaborn.pydata.org. seaborn.boxplot — seaborn 0.11.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.boxplot.html [Accessed 24 Mar. 2021].
     
     17. www.kite.com. Code Faster with Line-of-Code Completions, Cloudless Processing. [online] Available at: https://www.kite.com/python/docs/seaborn.swarmplot [Accessed 24 Mar. 2021].
+    
+    18. Sharma, N. (2018). Ways to Detect and Remove the Outliers. [online] Towards Data Science. Available at: https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba.
+
+
 
 
 
