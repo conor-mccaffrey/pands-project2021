@@ -5,7 +5,7 @@
 The Iris Flower [source = Dr Shahin Rostam, 2020. Part 1 - Dataset Analysis. [Online]. [17 March 2021]. Available from: https://datacrayon.com/posts/machine-learning/ml-with-kaggle/machine-learning-with-kaggle-kernels-part-1/ ] 
 
 ## Introduction 
-This README file will serve as both an introduction to Fisher's Iris Dataset and as evidence of the applicability of Python in investigating datasets. I also intend to use this README file as a tool, demonstrating my thought process for using certain attributes, methodologies and functions when describing the data. The main goal here is to be able to demonstrate the knowledge I have gained throughout the module and use this knowledge to be able to discern information from the Iris Dataset.
+This README file will serve as both an introduction to Fisher's Iris Dataset and as evidence of the applicability of Python in investigating datasets. I also intend to use this README file as a resource, demonstrating my thought process for using certain attributes, methodologies and functions when describing the data. The main goal here is to be able to demonstrate the knowledge I have gained throughout the module and use this knowledge to be able to discern information from the Iris Dataset.
 
 I have structured the README file as follows:
 
@@ -14,11 +14,11 @@ I have structured the README file as follows:
     3. Conclusion
     4. References
 
-## Overview of Iris Dataset, it's attributes, and it's application to Python
+## 1) Overview of Iris Dataset, it's attributes, and it's application to Python
 
-The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher [1]. The dataset was described in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attributing the actual collection of the data to Dr. Edgar Anderson [1]. The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' [2]. It is important to note that these measurements are in centimetres (cm). One class (sertosa) is linerally separable from the other two classes [3].
+The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher (1). The dataset was described in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attributing the actual collection of the data to Dr. Edgar Anderson (1). The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' (2). It is important to note that these measurements are in centimetres (cm). One class (sertosa) is linerally separable from the other two classes (3). We will display this in our investigation. 
 
-The measurements obtained were used to create a linear discriminant model to classify the species [4]. The dataset has become commonplace in computer science, in particlar pattern recognition literature and data visualisations [3]. The Iris Fischer Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn [5]. Further demonstrating the modern application of the Iris dataset, it is being increasingly incorporated into advances in machine learning (ML) teachings (10,11). 
+The measurements obtained were used to create a linear discriminant model to classify the species (4). The dataset has become commonplace in computer science, in particlar pattern recognition literature and data visualisations (3). The Iris Fischer Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn (5). Further demonstrating the modern application of the Iris dataset, it is being increasingly incorporated into advances in machine learning (ML) teachings (10,11). 
 
 ![1_uo6VfVH87jRjMZWVdwq3Vw](https://i.imgur.com/UJsxRwe.png)
 
@@ -37,7 +37,7 @@ To maintain structure and organisation during the project, I have set out a proj
     1. Create a repository on GitHub which I will clone onto Visual Studio as outlined during Week01 of the module, using SSH. I will call the repository 'pands-project2021' as requested.
     2. I will download the data for Fisher's Iris Data Set from the UCI Machine Learning Repository (http://archive.ics.uci.edu/ml/datasets/Iris) and add it to my repository using the Pandas 'read_csv' atttribute.
     3. I will carry out exploratory research on the dataset to familiarise myself with the data and it's potential for Python analysis and reference all items I extract information from.
-    4. I will then consider what type of analysis is relavant for this data set and investigate how to carry it out, drawing on various resources which will be references. This work will be stored in various different files.
+    4. I will then consider what type of analysis is relavant for this data set and investigate how to carry it out, drawing on various resources which will be referenced. This work will be stored in various different files.
     5. I will update the README file as I progress, and then compile all my work into a program called 'analysis.py'
 
 ### Importing Libraries
@@ -291,7 +291,7 @@ The code used for constructing the boxplots and swamplots were adapted from refe
 
 ![boxplots](https://i.imgur.com/A03TrtN.png)
 
-We can see outliers are present in each of our variables. The iris-Virginica class contains the most pronounced outliers in Sepal width and Sepal length. We can also see the wide variance in the Virginica data across each variable. The iris-Setosa data is interesting in the fact that the Petal data is compact (excluding the two outliers in each variable) but varied in Sepal data. We can also see the wide variance of the Sepal data in general, owing in part to their larger size.
+We can see outliers are present in each of our variables. The iris-Virginica class contains the most pronounced outliers in Sepal width and Sepal length. We can also see the wide variance in the Virginica data across each variable. The iris-Setosa data is interesting in the fact that the Petal data is compact (excluding the two outliers in each variable) but varied in Sepal data. There is also a clear distinction in the size of Petals in the class 'Setosa' compared to the other two classes. We can also see the wide variance of the Sepal data in general, owing in part to their larger size.
 
 ## Conclusion
 
