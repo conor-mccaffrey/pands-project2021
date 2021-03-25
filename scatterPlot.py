@@ -12,3 +12,8 @@ import seaborn as sns
 
 
 from uploadDataSet import data # importing our data. Again, this wont be necessary for final program
+
+
+sns.relplot(x=data['PetalWidth_cm'], y=data['PetalLength_cm'], data=data, hue = data['Class'])
+
+plt.show()
