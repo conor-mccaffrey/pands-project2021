@@ -371,7 +371,7 @@ In this final plot, we confirm the clustering of the setosa class or Iris. it is
 The main take-away point here is that we can clearly see the clustering effect of the setosa Iris class when compared to the virginica/versicolor Iris classes. 
 
 #### *Subplot of all Scatterplots*
-To facilitate rapid analyses of all scatterplot data, it is wise to construct a program that outputs all scatterplots in a single .png file.
+To facilitate rapid analyses of all scatterplot data, it is wise to construct a program that outputs all scatterplots to a single .png file.
 
 ```Python
 # create a figure 'fig' with axis 'ax1' with 3x2 configuration # reference 22
