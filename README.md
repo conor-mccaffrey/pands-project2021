@@ -375,8 +375,34 @@ To facilitate rapid analyses of all scatterplot data, it is wise to construct a 
 
 ```Python
 
-```
+# create a figure 'fig' with axis 'ax1' with 3x2 configuration (reference 22)
+fig, ax1 = plt.subplots(3,2, figsize=(25,20)) # adapted from kaggle.com (reference 22)
+fig.suptitle('Scatterplots of Iris Fisher Data Variables', style = 'italic', size = 25) # Overall title and editing font for appearance
 
+
+# 1st plot
+sns.scatterplot(data=data, x='SepalLength_cm', y='SepalWidth_cm', hue='Class', ax=ax1[0, 0]) 
+
+# 2nd plot
+sns.scatterplot(data=data, x='SepalWidth_cm', y="SepalLength_cm", hue='Class', ax=ax1[0, 1]) 
+
+# 3rd plot
+sns.scatterplot(data=data, x='SepalLength_cm', y="PetalLength_cm", hue='Class', ax=ax1[1, 0]) 
+
+# 4th plot
+sns.scatterplot(data=data, x='SepalWidth_cm', y='PetalLength_cm', hue='Class', ax=ax1[1, 1]) 
+
+# 5th plot
+sns.scatterplot(data=data, x='SepalLength_cm', y='PetalWidth_cm', hue='Class', ax=ax1[2, 0]) 
+
+# 6th plot
+sns.scatterplot(data=data, x='SepalWidth_cm', y="PetalWidth_cm", hue='Class', ax=ax1[2, 1]) 
+
+fig.savefig('overviewScat.png')
+
+```
+This code was heavily adapted from reference 22. Although it is not quite as easy to visualise individual datapoints, it is beneficial to have a resource containing all the scatterplots together for general rapid analysis.
+ ![overviewScat](https://i.imgur.com/Kro3rJq.png)
 
 ## Conclusion
 
@@ -424,6 +450,10 @@ To facilitate rapid analyses of all scatterplot data, it is wise to construct a 
     21. seaborn.pydata.org. seaborn.scatterplot — seaborn 0.11.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.scatterplot.html [Accessed 26 Mar. 2021].
     
     22. kaggle.com. How to do subplots - Iris Dataset. [online] Available at: https://www.kaggle.com/dcstang/how-to-do-subplots-iris-dataset [Accessed 26 Mar. 2021].
+    
+    23. Moonbooks.org. (2020). How to increase the size of axes labels on a seaborn heatmap in python ? [online] Available at: https://moonbooks.org/Articles/How-to-increase-the-size-of-axes-labels-on-a-seaborn-heatmap-in-python-/ [Accessed 26 Mar. 2021].
+
+
 
 
 
