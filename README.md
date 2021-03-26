@@ -293,6 +293,9 @@ The code used for constructing the boxplots and swamplots were adapted from refe
 
 We can see outliers are present in each of our variables. The iris-Virginica class contains the most pronounced outliers in Sepal width and Sepal length. We can also see the wide variance in the Virginica data across each variable. The iris-Setosa data is interesting in the fact that the Petal data is compact (excluding the two outliers in each variable) but varied in Sepal data. There is also a clear distinction in the size of Petals in the class 'Setosa' compared to the other two classes. We can also see the wide variance of the Sepal data in general, owing in part to their larger size.
 
+#### *Scatterplots of each pair of variables*
+
+
 ## Conclusion
 
 ## References
