@@ -294,6 +294,77 @@ The code used for constructing the boxplots and swamplots were adapted from refe
 We can see outliers are present in each of our variables. The iris-Virginica class contains the most pronounced outliers in Sepal width and Sepal length. We can also see the wide variance in the Virginica data across each variable. The iris-Setosa data is interesting in the fact that the Petal data is compact (excluding the two outliers in each variable) but varied in Sepal data. There is also a clear distinction in the size of Petals in the class 'Setosa' compared to the other two classes. We can also see the wide variance of the Sepal data in general, owing in part to their larger size.
 
 #### *Scatterplots of each pair of variables*
+The next step in our project is to be able to visualise each pair of variables through scatterplot analyses. Scatterplots hold some advantage over boxplots in the fact they are more visually accessible. Scatterplots facilitate the inspection of datapoints in a more detailed manner than histograms. The code to construct the scatterplots is shown below. The Seaborn documentation was consulted for editing properties of the scatterplots (21).
+
+```Python
+plt.figure() # idea adapted from reference StackOverflow (reference 19) 
+sns.set_style("darkgrid") # adapted from StackOverflow (reference 20)
+sns.scatterplot(data=data, x=data['SepalLength_cm'], y=data['SepalWidth_cm'], hue = data['Class']) #setting properties of plot (reference 20)
+plt.xlabel('Sepal Length')
+plt.ylabel('Sepal Width')
+plt.suptitle('Sepal Length v Sepal Width', fontsize = 12) 
+plt.savefig('scatPlotSL_v_SW.png') # saving output to a new file
+
+plt.figure()
+sns.scatterplot(data=data, x=data['SepalLength_cm'], y=data['PetalWidth_cm'], hue = data['Class']) 
+plt.xlabel('Sepal Length')
+plt.ylabel('Petal Width')
+plt.suptitle('Sepal Length v Petal Width', fontsize = 12) 
+plt.savefig('scatPlotSL_v_PW.png')
+
+plt.figure()
+sns.scatterplot(data=data, x=data['SepalLength_cm'], y=data['PetalLength_cm'],hue = data['Class']) 
+plt.xlabel('Sepal Length')
+plt.ylabel('Petal Length')
+plt.suptitle('Sepal Length v Petal Length', fontsize = 12) 
+plt.savefig('scatPlotSL_v_PL.png')
+
+plt.figure()
+sns.scatterplot(data=data, x=data['PetalLength_cm'], y=data['PetalWidth_cm'], hue = data['Class'])
+plt.xlabel('Petal Length')
+plt.ylabel('Petal Width')
+plt.suptitle('Petal Length v Petal Width', fontsize = 12) 
+plt.savefig('scatPlotPL_v_PW.png')
+
+plt.figure()
+sns.scatterplot(data=data, x=data['PetalLength_cm'], y=data['SepalWidth_cm'], hue = data['Class']) 
+plt.xlabel('Petal Length')
+plt.ylabel('Sepal Width')
+plt.suptitle('Petal Length v Sepal Width', fontsize = 12) 
+plt.savefig('scatPlotPL_v_SW.png')
+
+plt.figure()
+sns.scatterplot(data=data, x=data['SepalWidth_cm'], y=data['PetalWidth_cm'], hue = data['Class']) 
+plt.xlabel('Sepal Width')
+plt.ylabel('Petal Width')
+plt.suptitle('Sepal Width v Petal Width', fontsize = 12) 
+plt.savefig('scatPlotSW_v_PW.png')
+
+```
+
+The resulting outputs (each scatterplot was saved to a separate .png file for easier access) are shown below. In general, we can see the divergence between the setosa class and the virginica/versicolor class more clearly using scatterplots. 
+
+![scatPlotSL_v_SW](https://i.imgur.com/5LdiKjp.png)
+
+As will be the theme for all these scatterplots, we can see differences here between the setosa class and the remaining two classes. The difference between versicolor and virginica is negligible. The sepal width of the setoas class is trending higher.
+
+
+![scatPlotSL_v_PW](https://i.imgur.com/ae4iqmQ.png)
+
+A much more distinctive separation between setosa and versicolor/virginica is evident in petal length/width. The virginica/versicolor data is slightly interspersed while the setosa data is much more clustered. 
+
+![scatPlotSL_v_PL](https://i.imgur.com/ipczvmm.png)
+Once again, the setosa data is clearly divergent from the remaining two classes of Iris flower. The setosa petal length is smaller than the other two classes. The virginica class appears to have larger sepal/petal lengths, however they are quite similar.
+
+
+![scatPlotPL_v_PW](https://i.imgur.com/f6BviLh.png)
+
+For the petal data, we can see a clear distinction between the setosa class and the virginica/versicolor class. This ties in with the data we have seen previously. There is more of a distinction between virginica and versicolor here also, with the virginica class or Iris having larger petal attributes.
+
+![scatPlotPL_v_SW](https://i.imgur.com/etwbYLl.png)
+In this plot, we can see the clustering effect of setosa once again. We can also see a wide variance in each of the classes. It is interesting to note the clustering of setosa even when sepal and petal attributes are combined. This gives us greater confidence in the validity of our results.
+
+![scatPlotSW_v_PW](https://i.imgur.com/hcVQhdA.png)
 
 
 ## Conclusion
@@ -335,9 +406,12 @@ We can see outliers are present in each of our variables. The iris-Virginica cla
     
     18. Sharma, N. (2018). Ways to Detect and Remove the Outliers. [online] Towards Data Science. Available at: https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba.
     
-    19. Stack Overflow. python - I cannot set my Seaborn scatterplot to any style besides a white background, no matter how many times I change sns.set_style(). [online] Available at: https://stackoverflow.com/questions/63963562/i-cannot-set-my-seaborn-scatterplot-to-any-style-besides-a-white-background-no [Accessed 26 Mar. 2021].
+    19. Stack Overflow. python - Stop seaborn plotting multiple figures on top of one another. [online] Available at: https://stackoverflow.com/questions/36018681/stop-seaborn-plotting-multiple-figures-on-top-of-one-another [Accessed 26 Mar. 2021].
+
     
-    20. seaborn.pydata.org. seaborn.scatterplot — seaborn 0.11.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.scatterplot.html [Accessed 26 Mar. 2021].
+    20. Stack Overflow. python - I cannot set my Seaborn scatterplot to any style besides a white background, no matter how many times I change sns.set_style(). [online] Available at: https://stackoverflow.com/questions/63963562/i-cannot-set-my-seaborn-scatterplot-to-any-style-besides-a-white-background-no [Accessed 26 Mar. 2021].
+    
+    21. seaborn.pydata.org. seaborn.scatterplot — seaborn 0.11.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.scatterplot.html [Accessed 26 Mar. 2021].
 
 
 
