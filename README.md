@@ -366,6 +366,17 @@ In this plot, we can see the clustering effect of setosa once again. We can also
 
 ![scatPlotSW_v_PW](https://i.imgur.com/hcVQhdA.png)
 
+In this final plot, we confirm the clustering of the setosa class or Iris. it is also clear that there is interspersion between the virginica/versicolor classes. We can still gauge that the petal width of the virginica class is trending higher however this is not as pronounced as the setosa data.
+
+The main take-away point here is that we can clearly see the clustering effect of the setosa Iris class when compared to the virginica/versicolor Iris classes. 
+
+#### *Subplot of all Scatterplots*
+To facilitate rapid analyses of all scatterplot data, it is wise to construct a program that outputs all scatterplots in a single .png file.
+
+```Python
+
+```
+
 
 ## Conclusion
 
@@ -407,15 +418,12 @@ In this plot, we can see the clustering effect of setosa once again. We can also
     18. Sharma, N. (2018). Ways to Detect and Remove the Outliers. [online] Towards Data Science. Available at: https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba.
     
     19. Stack Overflow. python - Stop seaborn plotting multiple figures on top of one another. [online] Available at: https://stackoverflow.com/questions/36018681/stop-seaborn-plotting-multiple-figures-on-top-of-one-another [Accessed 26 Mar. 2021].
-
-    
+   
     20. Stack Overflow. python - I cannot set my Seaborn scatterplot to any style besides a white background, no matter how many times I change sns.set_style(). [online] Available at: https://stackoverflow.com/questions/63963562/i-cannot-set-my-seaborn-scatterplot-to-any-style-besides-a-white-background-no [Accessed 26 Mar. 2021].
     
     21. seaborn.pydata.org. seaborn.scatterplot — seaborn 0.11.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.scatterplot.html [Accessed 26 Mar. 2021].
-
-
-
-
+    
+    22. kaggle.com. How to do subplots - Iris Dataset. [online] Available at: https://www.kaggle.com/dcstang/how-to-do-subplots-iris-dataset [Accessed 26 Mar. 2021].
 
 
 
