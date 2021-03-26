@@ -331,6 +331,14 @@ We can see outliers are present in each of our variables. The iris-Virginica cla
     17. www.kite.com. Code Faster with Line-of-Code Completions, Cloudless Processing. [online] Available at: https://www.kite.com/python/docs/seaborn.swarmplot [Accessed 24 Mar. 2021].
     
     18. Sharma, N. (2018). Ways to Detect and Remove the Outliers. [online] Towards Data Science. Available at: https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba.
+    
+    19. Stack Overflow. python - I cannot set my Seaborn scatterplot to any style besides a white background, no matter how many times I change sns.set_style(). [online] Available at: https://stackoverflow.com/questions/63963562/i-cannot-set-my-seaborn-scatterplot-to-any-style-besides-a-white-background-no [Accessed 26 Mar. 2021].
+    
+    20. seaborn.pydata.org. seaborn.scatterplot — seaborn 0.11.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.scatterplot.html [Accessed 26 Mar. 2021].
+
+
+
+
 
 
 

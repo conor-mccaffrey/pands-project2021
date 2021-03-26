@@ -12,6 +12,5 @@ import seaborn as sns
 
 
 from uploadDataSet import data # importing our data. Again, this wont be necessary for final program
-sns.set_style("darkgrid")
-sns.scatterplot(data=data, x=data["SepalLength_cm"], y=data["SepalWidth_cm"], hue=data['Class'])
-plt.show()
+sns.set_style("darkgrid") # adapted from StackOverflow (reference 19)
+sns.scatterplot(data=data, x=data["SepalLength_cm"], y=data["SepalWidth_cm"], hue=data['Class']) #setting properties of plot (reference 20)
