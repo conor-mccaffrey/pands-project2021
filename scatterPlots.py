@@ -26,7 +26,7 @@ fig = px.scatter(data, x='PetalLength_cm', y='SepalWidth_cm', color='Class',
 fig.write_image('scatPlotPLSW.png')
 
 fig = px.scatter(data, x='PetalLength_cm', y='PetalWidth_cm', color='Class',
-            template='plotly_dark', title = 'Petallength v PetalWidth')
+            template='plotly_dark', title = 'PetalLength v PetalWidth')
 fig.write_image('scatPlotPLPW.png')
 
 fig = px.scatter(data, x='SepalLength_cm', y='PetalLength_cm', color='Class',
