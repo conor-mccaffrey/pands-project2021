@@ -342,7 +342,7 @@ A much more distinctive separation between setosa and versicolor/virginica is ev
 Once again, the setosa data is clearly divergent from the remaining two classes of Iris flower. The setosa petal/sepal length is smaller than the other two classes. The virginica class appears to have larger sepal/petal lengths, however they are quite similar.
 
 
-![scatPlotPLPW](https://i.imgur.com/9pyqtiX.png)
+![scatPlotPLPW](https://i.imgur.com/QEP4TAO.png)
 
 For the petal data, we can see a clear distinction between the setosa class and the virginica/versicolor class. This ties in with the data we have seen previously. There is more of a distinction between virginica and versicolor here also, with the virginica class or Iris having larger petal attributes.
 
