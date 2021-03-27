@@ -294,55 +294,39 @@ The code used for constructing the boxplots and swamplots were adapted from refe
 We can see outliers are present in each of our variables. The iris-Virginica class contains the most pronounced outliers in Sepal width and Sepal length. We can also see the wide variance in the Virginica data across each variable. The iris-Setosa data is interesting in the fact that the Petal data is compact (excluding the two outliers in each variable) but varied in Sepal data. There is also a clear distinction in the size of Petals in the class 'Setosa' compared to the other two classes. We can also see the wide variance of the Sepal data in general, owing in part to their larger size.
 
 #### *Scatterplots of each pair of variables*
-The next step in our project is to be able to visualise each pair of variables through scatterplot analyses. Scatterplots hold some advantage over boxplots in the fact they are more visually accessible. Scatterplots facilitate the inspection of datapoints in a more detailed manner than histograms. The code to construct the scatterplots is shown below. The Seaborn documentation was consulted for editing properties of the scatterplots (21).
+The next step in our project is to be able to visualise each pair of variables through scatterplot analyses. Scatterplots hold some advantage over boxplots in the fact they are more visually accessible. Scatterplots facilitate the inspection of datapoints in a more detailed manner than histograms. The code to construct the scatterplots is shown below. The Plotly library was used for construction of each scatterplot. I feel the aesthetics of Plotly are nicer than both matplotlib and Seaborn. The Plotly library was installed in the same manner ('pip install') as other libraries and sourced from 'Plotly.com' (19). The code for constructing each scatter plot was obtained from the same source (20) and adapted to display each pair of variables.
 
 ```Python
-plt.figure() # idea adapted from reference StackOverflow (reference 19) 
-sns.set_style("darkgrid") # adapted from StackOverflow (reference 20)
-sns.scatterplot(data=data, x=data['SepalLength_cm'], y=data['SepalWidth_cm'], hue = data['Class']) #setting properties of plot (reference 20)
-plt.xlabel('Sepal Length')
-plt.ylabel('Sepal Width')
-plt.suptitle('Sepal Length v Sepal Width', fontsize = 12) 
-plt.savefig('scatPlotSL_v_SW.png') # saving output to a new file
+# using newly imported Plotly library. Setting properties of scatterplot and saving outputs to separate 
+# .png files.
 
-plt.figure()
-sns.scatterplot(data=data, x=data['SepalLength_cm'], y=data['PetalWidth_cm'], hue = data['Class']) 
-plt.xlabel('Sepal Length')
-plt.ylabel('Petal Width')
-plt.suptitle('Sepal Length v Petal Width', fontsize = 12) 
-plt.savefig('scatPlotSL_v_PW.png')
+fig = px.scatter(data, x='SepalWidth_cm', y='SepalLength_cm', color='Class',  # 'class' will be our legend 
+            template='plotly_dark', title = 'SepalWidth v SepalLength') # using a dark theme
+fig.write_image('scatPlotSWSL.png')
 
-plt.figure()
-sns.scatterplot(data=data, x=data['SepalLength_cm'], y=data['PetalLength_cm'],hue = data['Class']) 
-plt.xlabel('Sepal Length')
-plt.ylabel('Petal Length')
-plt.suptitle('Sepal Length v Petal Length', fontsize = 12) 
-plt.savefig('scatPlotSL_v_PL.png')
+fig = px.scatter(data, x='PetalLength_cm', y='SepalWidth_cm', color='Class',
+           template='plotly_dark', title = 'PetalLength v SepalWidth')
+fig.write_image('scatPlotPLSW.png')
 
-plt.figure()
-sns.scatterplot(data=data, x=data['PetalLength_cm'], y=data['PetalWidth_cm'], hue = data['Class'])
-plt.xlabel('Petal Length')
-plt.ylabel('Petal Width')
-plt.suptitle('Petal Length v Petal Width', fontsize = 12) 
-plt.savefig('scatPlotPL_v_PW.png')
+fig = px.scatter(data, x='PetalLength_cm', y='PetalWidth_cm', color='Class',
+            template='plotly_dark', title = 'Petallength v PetalWidth')
+fig.write_image('scatPlotPLPW.png')
 
-plt.figure()
-sns.scatterplot(data=data, x=data['PetalLength_cm'], y=data['SepalWidth_cm'], hue = data['Class']) 
-plt.xlabel('Petal Length')
-plt.ylabel('Sepal Width')
-plt.suptitle('Petal Length v Sepal Width', fontsize = 12) 
-plt.savefig('scatPlotPL_v_SW.png')
+fig = px.scatter(data, x='SepalLength_cm', y='PetalLength_cm', color='Class',
+            template='plotly_dark', title = 'SepalLength v PetalLength')
+fig.write_image('scatPlotSLPL.png')
 
-plt.figure()
-sns.scatterplot(data=data, x=data['SepalWidth_cm'], y=data['PetalWidth_cm'], hue = data['Class']) 
-plt.xlabel('Sepal Width')
-plt.ylabel('Petal Width')
-plt.suptitle('Sepal Width v Petal Width', fontsize = 12) 
-plt.savefig('scatPlotSW_v_PW.png')
+fig = px.scatter(data, x='SepalLength_cm', y='PetalWidth_cm', color='Class',
+            template='plotly_dark', title = 'SepalLength v PetalWidth')
+fig.write_image('scatPlotSLPW.png')
+
+fig = px.scatter(data, x='SepalWidth_cm', y='PetalWidth_cm', color='Class',
+            template='plotly_dark', title = 'SepalWidth v PetalWidth')
+fig.write_image('scatPlot_SWPW.png')
 
 ```
 
-The resulting outputs (each scatterplot was saved to a separate .png file for easier access) are shown below. In general, we can see the divergence between the setosa class and the virginica/versicolor class more clearly using scatterplots. 
+The resulting outputs (each scatterplot was saved to a separate .png file for easier access) are shown below. In general, we can see the divergence between the setosa class and the virginica/versicolor class more clearly using scatterplots. In Plotly, outputs are generally displayed on a webpage however the output can be redirected to a file saved locally (21).
 
 ![scatPlotSL_v_SW](https://i.imgur.com/5LdiKjp.png)
 
@@ -371,7 +355,7 @@ In this final plot, we confirm the clustering of the setosa class or Iris. it is
 The main take-away point here is that we can clearly see the clustering effect of the setosa Iris class when compared to the virginica/versicolor Iris classes. 
 
 #### *Subplot of all Scatterplots*
-To facilitate rapid analyses of all scatterplot data, it is wise to construct a program that outputs all scatterplots to a single .png file.
+To facilitate rapid analyses of all scatterplot data, it is wise to construct a program that outputs all scatterplots to a single .png file. To complete this, the Seaborn library was used.
 
 ```Python
 # create a figure 'fig' with axis 'ax1' with 3x2 configuration # reference 22
@@ -446,15 +430,15 @@ This code was heavily adapted from reference 22. Although it is not quite as eas
     
     18. Sharma, N. (2018). Ways to Detect and Remove the Outliers. [online] Towards Data Science. Available at: https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba.
     
-    19. Stack Overflow. python - Stop seaborn plotting multiple figures on top of one another. [online] Available at: https://stackoverflow.com/questions/36018681/stop-seaborn-plotting-multiple-figures-on-top-of-one-another [Accessed 26 Mar. 2021].
+    19. plotly.com.. Plotly Express. [online] Available at: https://plotly.com/python/plotly-express/. [Accessed 27 Mar. 2021].
    
-    20. Stack Overflow. python - I cannot set my Seaborn scatterplot to any style besides a white background, no matter how many times I change sns.set_style(). [online] Available at: https://stackoverflow.com/questions/63963562/i-cannot-set-my-seaborn-scatterplot-to-any-style-besides-a-white-background-no [Accessed 26 Mar. 2021].
+    20. plotly.com. (n.d.). Scatter Plots. [online] Available at: https://plotly.com/python/line-and-scatter/. [Accessed 27 Mar. 2021].
+
+    21. plotly.com. Static Image Export. [online] Available at: https://plotly.com/python/static-image-export/ [Accessed 27 Mar. 2021].
     
-    21. seaborn.pydata.org. seaborn.scatterplot — seaborn 0.11.1 documentation. [online] Available at: https://seaborn.pydata.org/generated/seaborn.scatterplot.html [Accessed 26 Mar. 2021].
+    22. kaggle.com. How to do subplots - Iris Dataset. [online] Available at: https://www.kaggle.com/dcstang/how-to-do-subplots-iris-dataset [Accessed 27 Mar. 2021].
     
-    22. kaggle.com. How to do subplots - Iris Dataset. [online] Available at: https://www.kaggle.com/dcstang/how-to-do-subplots-iris-dataset [Accessed 26 Mar. 2021].
-    
-    23. Moonbooks.org. (2020). How to increase the size of axes labels on a seaborn heatmap in python ? [online] Available at: https://moonbooks.org/Articles/How-to-increase-the-size-of-axes-labels-on-a-seaborn-heatmap-in-python-/ [Accessed 26 Mar. 2021].
+    23. Moonbooks.org. (2020). How to increase the size of axes labels on a seaborn heatmap in python ? [online] Available at: https://moonbooks.org/Articles/How-to-increase-the-size-of-axes-labels-on-a-seaborn-heatmap-in-python-/ [Accessed 27 Mar. 2021].
 
 
 
