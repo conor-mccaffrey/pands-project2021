@@ -330,19 +330,25 @@ The resulting outputs (each scatterplot was saved to a separate .png file for ea
 
 ![scatPlotSWSL](https://i.imgur.com/kWQMDHV.png)
 
+
 As will be the theme for all these scatterplots, we can see differences here between the setosa class and the remaining two classes. The difference between versicolor and virginica is negligible. The sepal width of the setosa class is trending higher.
 
 ![scatPlotSLPW](https://i.imgur.com/TMKbOGf.png)
+
 A much more distinctive separation between setosa and versicolor/virginica is evident in petal length and sepal width. The virginica/versicolor data is slightly interspersed while the setosa data is much more clustered. 
 
 ![scatPlotSLPL](https://i.imgur.com/V0oslUX.png)
+
 Once again, the setosa data is clearly divergent from the remaining two classes of Iris flower. The setosa petal/sepal length is smaller than the other two classes. The virginica class appears to have larger sepal/petal lengths, however they are quite similar.
 
 
 ![scatPlotPLPW](https://i.imgur.com/9pyqtiX.png)
+
 For the petal data, we can see a clear distinction between the setosa class and the virginica/versicolor class. This ties in with the data we have seen previously. There is more of a distinction between virginica and versicolor here also, with the virginica class or Iris having larger petal attributes.
 
-![scatPlotPLSW](https://i.imgur.com/71RR8R3.png)In this plot, we can see the clustering effect of setosa once again. We can also see a wide variance in each of the classes. It is interesting to note the clustering of setosa even when sepal and petal attributes are combined. This gives us greater confidence in the validity of our results.
+![scatPlotPLSW](https://i.imgur.com/71RR8R3.png)
+
+In this plot, we can see the clustering effect of setosa once again. We can also see a wide variance in each of the classes. It is interesting to note the clustering of setosa even when sepal and petal attributes are combined. This gives us greater confidence in the validity of our results.
 
 ![scatPlot_SWPW](https://i.imgur.com/RV0UNJb.png)
 
