@@ -17,3 +17,5 @@ except BaseException as Exception:
     print('We have hit a snag, try that again')
 else:
     print('Upload of dataset successful') # to confirm that we have uploaded the dataset without any issues.
+
+print(data)

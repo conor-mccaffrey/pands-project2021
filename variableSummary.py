@@ -22,7 +22,7 @@ with open('variablesSummary.txt', 'w') as text_file: # creating a new .txt file 
     print(data.head(8), '\n') # print 8 top rows in dataset
     print(data.sample(20), '\n')  # print 20 random samples
     print(data.describe(), '\n') # This will output basic exploratory analyses (statistial summaries) of the dataset.
-    print(data.corr()) # This will display the correlatiopn betweeen 
+    print(data.corr()) # This will display the correlation betweeen each variable
     
 
 sys.stdout = original_stdout # Reset the standard output to its original value to avoid adding data we dont want to newly created file
