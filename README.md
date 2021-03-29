@@ -329,29 +329,30 @@ fig.write_image('scatPlot_SWPW.png')
 
 The resulting outputs (each scatterplot was saved to a separate .png file for easier access) are shown below. In general, we can see the divergence between the setosa class and the virginica/versicolor class more clearly using scatterplots. In Plotly, outputs are generally displayed on a webpage however the output can be redirected to a file saved locally (21).
 
-![scatPlotSWSL](https://i.imgur.com/kWQMDHV.png)
+![scatPlotSWSL](https://i.imgur.com/Ck45AKO.png)
 
 
 As will be the theme for all these scatterplots, we can see differences here between the setosa class and the remaining two classes. The difference between versicolor and virginica is negligible. The sepal width of the setosa class is trending higher.
 
-![scatPlotSLPW](https://i.imgur.com/TMKbOGf.png)
+![scatPlotSLPW](https://i.imgur.com/lRVPm6e.png)
 
 A much more distinctive separation between setosa and versicolor/virginica is evident in petal length and sepal width. The virginica/versicolor data is slightly interspersed while the setosa data is much more clustered. 
 
-![scatPlotSLPL](https://i.imgur.com/V0oslUX.png)
+![scatPlotSLPL](https://i.imgur.com/Wra87H6.png)
 
 Once again, the setosa data is clearly divergent from the remaining two classes of Iris flower. The setosa petal/sepal length is smaller than the other two classes. The virginica class appears to have larger sepal/petal lengths, however they are quite similar.
 
 
-![scatPlotPLPW](https://i.imgur.com/QEP4TAO.png)
+![scatPlotPLPW](https://i.imgur.com/ZAf2XJT.png)
 
 For the petal data, we can see a clear distinction between the setosa class and the virginica/versicolor class. This ties in with the data we have seen previously. There is more of a distinction between virginica and versicolor here also, with the virginica class or Iris having larger petal attributes.
 
-![scatPlotPLSW](https://i.imgur.com/71RR8R3.png)
+
+![scatPlotPLSW](https://i.imgur.com/bSSEUXb.png)
 
 In this plot, we can see the clustering effect of setosa once again. We can also see a wide variance in each of the classes. It is interesting to note the clustering of setosa even when sepal and petal attributes are combined. This gives us greater confidence in the validity of our results.
 
-![scatPlot_SWPW](https://i.imgur.com/RV0UNJb.png)
+![scatPlot_SWPW](https://i.imgur.com/fSsWYSp.png)
 
 In this final plot, we confirm the clustering of the setosa class or Iris. it is also clear that there is interspersion between the virginica/versicolor classes. We can still gauge that the petal width of the virginica class is trending higher however this is not as pronounced as the setosa data.
 
