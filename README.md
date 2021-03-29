@@ -294,7 +294,7 @@ The code used for constructing the boxplots and swamplots were adapted from refe
 We can see outliers are present in each of our variables. The iris-Virginica class contains the most pronounced outliers in Sepal width and Sepal length. We can also see the wide variance in the Virginica data across each variable. The iris-Setosa data is interesting in the fact that the Petal data is compact (excluding the two outliers in each variable) but varied in Sepal data. There is also a clear distinction in the size of Petals in the class 'Setosa' compared to the other two classes. We can also see the wide variance of the Sepal data in general, owing in part to their larger size.
 
 #### *Scatterplots of each pair of variables*
-The next step in our project is to be able to visualise each pair of variables through scatterplot analyses. Scatterplots hold some advantage over boxplots in the fact they are more visually accessible. Scatterplots facilitate the inspection of datapoints in a more detailed manner than histograms. The code to construct the scatterplots is shown below. The Plotly library was used for construction of each scatterplot. I feel the aesthetics of Plotly are nicer than both matplotlib and Seaborn. The Plotly library was installed in the same manner ('pip install') as other libraries and sourced from 'Plotly.com' (19). The code for constructing each scatter plot was obtained from the same source (20) and adapted to display each pair of variables.
+The next step in our project is to be able to visualise each pair of variables through scatterplot analyses. Scatterplots hold some advantage over boxplots in the fact they are more visually accessible. Scatterplots facilitate the inspection of datapoints in a more detailed manner than histograms. The code to construct the scatterplots is shown below. The Plotly library was used for construction of each scatterplot. I feel the aesthetics of Plotly are nicer than both matplotlib and Seaborn. The Plotly library was installed in the same manner ('pip install') as other libraries and sourced from 'Plotly.com' (19). The code for constructing each scatter plot was obtained from the same source (20) and adapted to display each pair of variables. I also decided to add histograms for each variable on some of the scatterplots. This gives us an even greater insight into the distribution of datapoints between each species. 
 
 ```Python
 # using newly imported Plotly library. Setting properties of scatterplot and saving outputs to separate 
@@ -327,12 +327,12 @@ fig.write_image('scatPlot_SWPW.png')
 
 ```
 
-The resulting outputs (each scatterplot was saved to a separate .png file for easier access) are shown below. In general, we can see the divergence between the setosa class and the virginica/versicolor class more clearly using scatterplots. In Plotly, outputs are generally displayed on a webpage however the output can be redirected to a file saved locally (21).
+The resulting outputs (each scatterplot was saved to a separate .png file for easier access) are shown below. In general, we can see the divergence between the setosa class and the virginica/versicolor class more clearly using scatterplots. In Plotly, outputs are generally displayed on a webpage however the output can be redirected to a file saved locally (21). 
 
 ![scatPlotSWSL](https://i.imgur.com/Ck45AKO.png)
 
 
-As will be the theme for all these scatterplots, we can see differences here between the setosa class and the remaining two classes. The difference between versicolor and virginica is negligible. The sepal width of the setosa class is trending higher.
+As will be the theme for all these scatterplots, we can see differences here between the setosa class and the remaining two classes. The difference between versicolor and virginica is negligible. The sepal width of the setosa class is trending higher. This can be confirmed by analysing the accompanying histogram.
 
 ![scatPlotSLPW](https://i.imgur.com/lRVPm6e.png)
 
@@ -340,7 +340,7 @@ A much more distinctive separation between setosa and versicolor/virginica is ev
 
 ![scatPlotSLPL](https://i.imgur.com/Wra87H6.png)
 
-Once again, the setosa data is clearly divergent from the remaining two classes of Iris flower. The setosa petal/sepal length is smaller than the other two classes. The virginica class appears to have larger sepal/petal lengths, however they are quite similar.
+Once again, the setosa data is clearly divergent from the remaining two classes of Iris flower. The setosa petal/sepal length is smaller than the other two classes. The virginica class appears to have larger sepal/petal lengths, however they are quite similar. Analysis of the histgram data for Sepal Length confirms that the iris setosa is shorter in length. The resulting histogram analysis displays the extent of iris virginica/versicolor inter-relation and the distinction between setosa and the remaining two iris species. 
 
 
 ![scatPlotPLPW](https://i.imgur.com/ZAf2XJT.png)
@@ -350,7 +350,7 @@ For the petal data, we can see a clear distinction between the setosa class and 
 
 ![scatPlotPLSW](https://i.imgur.com/bSSEUXb.png)
 
-In this plot, we can see the clustering effect of setosa once again. We can also see a wide variance in each of the classes. It is interesting to note the clustering of setosa even when sepal and petal attributes are combined. This gives us greater confidence in the validity of our results.
+In this plot, we can see the clustering effect of setosa once again. We can also see a wide variance in each of the classes. It is interesting to note the clustering of setosa even when sepal and petal attributes are combined. This gives us greater confidence in the validity of our results. From analysing the histogram for Petal length, it can be seen just how divergent the setosa petal lengths are compared to iris virginica and iris versicolor.
 
 ![scatPlot_SWPW](https://i.imgur.com/fSsWYSp.png)
 
