@@ -15,14 +15,13 @@ fig.suptitle('Scatterplots of Iris Fisher Data Variables', style = 'italic', siz
 sns.set(font_scale=1.2) # increasing size of legend (23)
 
 # 1st plot
-sns.scatterplot(data=data, x='SepalLength_cm', y='SepalWidth_cm', hue='Class', ax=ax1[0, 0]) 
+sns.scatterplot(data=data, x='SepalLength_cm', y='SepalWidth_cm', hue='Class', annot_kws={'size': 15}, ax=ax1[0, 0]) 
 
 # 2nd plot
 sns.scatterplot(data=data, x='SepalWidth_cm', y='SepalLength_cm', hue='Class', ax=ax1[0, 1]) 
 
 # 3rd plot
 sns.scatterplot(data=data, x='SepalLength_cm', y='PetalLength_cm', hue='Class', ax=ax1[1, 0]) 
-
 
 # 4th plot
 sns.scatterplot(data=data, x='SepalWidth_cm', y='PetalLength_cm', hue='Class', ax=ax1[1, 1]) 
