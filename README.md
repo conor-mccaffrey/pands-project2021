@@ -250,7 +250,7 @@ plt.savefig('overviewHist.png')
 
 The take-away points of this are:
 *  The Petal data has a lot more variance than the Sepal data 
-*  We may have outliers present in the Petal data that is skewing the distribution of the data 
+*  We may have outliers present in the Petal data that are skewing the distribution of the data 
 
 #### *Correlation Map of Data for Statistical Summary* 
 
@@ -418,10 +418,18 @@ ax1[2].set_title('Virginica', fontsize=30)
 fig.savefig('correlationSpecies.png')
 
 ```
-I began by splitting the dataset based on each class (24). Once the dataset was split, I created the subplots as used previously for the scatterplots (22). I increased the font-size so that everything would be visible even when preparing three correlation heatmaps (25). I constructed the heatmaps in the same format used for the scatterplots and gave each heatmap it's own title and increased the annotation size using GeekforGeeks (26).
+I began by splitting the dataset based on each class (24). Once the dataset was split, I created the subplots as used previously for the scatterplots (22). I increased the font-size so that everything would be visible even when preparing three correlation heatmaps (25). I constructed the heatmaps in the same format used for the scatterplots and gave each heatmap it's own title and increased the annotation size using a GeekforGeeks example (26).
 
 ![correlationSpecies](https://i.imgur.com/5kNeapz.png)
 
+We can see some differences in our correlations here when compared with our 'overall' correlation heatmap in an earlier section. In the 'overall' correlation plot, the main finding was the strong postive correlation between Petal length and Petal Width. This finding is only maintained in the versicolor correlation heatmap. The correlation in setosa and virginica is negligible. Another finding from our 'overall' correlation plot was that there may be a slight positive correlation between Sepal length and Petal length. This finding is maintained in the versicolor and virginica correlation plots but not in the setosa. Once again, we are experiencing divergences between setosa and the other iris classes. 
+Some new information also comes to light as a result of the species correlations plots. We can see a strong positive correlation between Sepal width and Sepal length in the setosa class. 
+
+The take away points from this are:
+* When examining datasets, it is best to be inquisitive. This species correlation plot was only constructed as a result of observing how the data was distributed in the scatter plots.
+* The strong correlation for Petal length/width is only maintained in the versicolor class.
+* The slight positive correlation Sepal length/Petal length is maintained in the versicolor and virginica classes.
+* Setosa class once again diverges from the other iris classes in Sepal correlations.
 
 ## Conclusion
 
