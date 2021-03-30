@@ -394,6 +394,34 @@ fig.savefig('overviewScat.png')
 This code was heavily adapted from reference 22. Although it is not quite as easy to visualise individual datapoints, it is beneficial to have a resource containing all the scatterplots together for general rapid analysis.
 ![overviewScat](https://i.imgur.com/ftkRMrQ.png)
 
+#### *Correlation Plot by Species*
+
+From analysing the scatterplot results and examining how the setosa class was linearly divergent from the virginica and versicolor class, I thought it would be interesting to construct a correlation matrix of each species to determine if we could discern any more information from it. The code used was as follows:
+
+```Python
+setosa = data.loc[0:49] # splitting data by class (reference 24)
+versicolor = data.loc[50:99]
+virginica = data.loc[100:149]
+
+sns.set(font_scale=2) # increasing font size of colour bar and x,y axes
+fig, ax1 = plt.subplots(3, figsize=(25,20)) # setting up our subplot as per previous examples
+# setting attributes of correlation heatmap
+sns.heatmap(setosa.corr(), annot=True, cmap='YlGnBu' , cbar = True, linecolor='green', annot_kws={'size': 15}, robust = True, ax=ax1[0]) # 'annot_kws' will increase the size of the figures in the cell
+ax1[0].set_title('Setosa', fontsize=30) # setting individual titles
+
+sns.heatmap(versicolor.corr(), annot=True, cmap='YlGnBu' , cbar = True, linecolor='green', robust= True, annot_kws={'size': 15}, ax=ax1[1]) 
+ax1[1].set_title('Versicolor', fontsize=30)
+
+sns.heatmap(virginica.corr(), annot=True, cmap='YlGnBu' , cbar = True, linecolor='green', robust= True, annot_kws={'size': 15}, ax=ax1[2]) 
+ax1[2].set_title('Virginica', fontsize=30)
+
+fig.savefig('correlationSpecies.png')
+
+```
+I began by splitting the dataset based on each class (24). Once the dataset was split, I created the subplots as used previously for the scatterplots (22). I increased the font-size so that everything would be visible even when preparing three correlation heatmaps (25). I constructed the heatmaps in the same format used for the scatterplots and gave each heatmap it's own title and increased the annotation size using GeekforGeeks (26).
+
+![correlationSpecies](https://i.imgur.com/5kNeapz.png)
+
 
 ## Conclusion
 
@@ -443,6 +471,21 @@ This code was heavily adapted from reference 22. Although it is not quite as eas
     22. kaggle.com. How to do subplots - Iris Dataset. [online] Available at: https://www.kaggle.com/dcstang/how-to-do-subplots-iris-dataset [Accessed 27 Mar. 2021].
     
     23. Moonbooks.org. (2020). How to increase the size of axes labels on a seaborn heatmap in python ? [online] Available at: https://moonbooks.org/Articles/How-to-increase-the-size-of-axes-labels-on-a-seaborn-heatmap-in-python-/ [Accessed 27 Mar. 2021].
+   
+    24. www.shanelynn.ie. Python Pandas iloc, loc, and ix for DataFrame selection. [online] Available at: https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/ [Accessed 30 Mar. 2021].
+    
+    25. Like Geeks. (2019). Seaborn heatmap tutorial (Python Data Visualization) - Like Geeks. [online] Available at: https://likegeeks.com/seaborn-heatmap-tutorial/. [Accessed 30 Mar. 2021].
+    
+    26. GeeksforGeeks. (2020). How to increase the size of the annotations of a seaborn heatmap in Python? [online] Available at: https://www.geeksforgeeks.org/how-to-increase-the-size-of-the-annotations-of-a-seaborn-heatmap-in-python/ [Accessed 30 Mar. 2021].
+
+
+
+
+    
+
+
+
+
 
 
 
