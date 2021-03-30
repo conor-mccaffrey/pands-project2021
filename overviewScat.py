@@ -15,22 +15,35 @@ fig.suptitle('Scatterplots of Iris Fisher Data Variables', style = 'italic', siz
 sns.set(font_scale=1.2) # increasing size of legend (23)
 
 # 1st plot
-sns.scatterplot(data=data, x='SepalLength_cm', y='SepalWidth_cm', hue='Class', annot_kws={'size': 15}, ax=ax1[0, 0]) 
+sns.scatterplot(data=data, x='SepalLength_cm', y='SepalWidth_cm', hue='Class', ax=ax1[0, 0]) 
+ax1[0,0].set_xlabel('Sepal Length ', fontsize='large', fontweight='bold')
+ax1[0,0].set_ylabel('Sepal Width ', fontsize='large', fontweight='bold')
 
 # 2nd plot
 sns.scatterplot(data=data, x='SepalWidth_cm', y='SepalLength_cm', hue='Class', ax=ax1[0, 1]) 
+ax1[0,1].set_xlabel('Sepal Width ', fontsize='large', fontweight='bold')
+ax1[0,1].set_ylabel('Sepal Length ', fontsize='large', fontweight='bold')
 
 # 3rd plot
 sns.scatterplot(data=data, x='SepalLength_cm', y='PetalLength_cm', hue='Class', ax=ax1[1, 0]) 
+ax1[1,0].set_xlabel('Sepal Length ', fontsize='large', fontweight='bold')
+ax1[1,0].set_ylabel('Petal Length ', fontsize='large', fontweight='bold')
 
 # 4th plot
 sns.scatterplot(data=data, x='SepalWidth_cm', y='PetalLength_cm', hue='Class', ax=ax1[1, 1]) 
+ax1[1,1].set_xlabel('Sepal Width ', fontsize='large', fontweight='bold')
+ax1[1,1].set_ylabel('Petal Length ', fontsize='large', fontweight='bold')
+
 
 # 5th plot
 sns.scatterplot(data=data, x='SepalLength_cm', y='PetalWidth_cm', hue='Class', ax=ax1[2, 0]) 
+ax1[2,0].set_xlabel('Sepal Length ', fontsize='large', fontweight='bold')
+ax1[2,0].set_ylabel('Petal Width ', fontsize='large', fontweight='bold')
 
 # 6th plot
 sns.scatterplot(data=data, x='SepalWidth_cm', y="PetalWidth_cm", hue='Class', ax=ax1[2, 1]) 
+ax1[2,1].set_xlabel('Sepal Width ', fontsize='large', fontweight='bold')
+ax1[2,1].set_ylabel('Petal Width ', fontsize='large', fontweight='bold')
 
 
 fig.savefig('overviewScat.png')
