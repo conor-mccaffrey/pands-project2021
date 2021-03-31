@@ -18,7 +18,7 @@ I have structured the README file as follows:
 
 The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher (1). The dataset was described in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attributing the actual collection of the data to Dr. Edgar Anderson (1). The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' (2). It is important to note that these measurements are in centimetres (cm). One class (sertosa) is linerally separable from the other two classes (3). We will display this in our investigation. 
 
-The measurements obtained were used to create a linear discriminant model to classify the species (4). The dataset has become commonplace in computer science, in particlar pattern recognition literature and data visualisations (3). The Iris Fischer Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn (5). Further demonstrating the modern application of the Iris dataset, it is being increasingly incorporated into advances in machine learning (ML) teachings (10,11). 
+The measurements obtained were used to create a linear discriminant model to classify the species (4). The dataset has become commonplace in computer science, in particlar pattern recognition literature and data visualisations (3). The Iris Fisher Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn (5). Further demonstrating the modern application of the Iris dataset, it is being increasingly incorporated into advances in machine learning (ML) teachings (10,11). 
 
 ![1_uo6VfVH87jRjMZWVdwq3Vw](https://i.imgur.com/UJsxRwe.png)
 
@@ -60,7 +60,7 @@ The libraries I imported are all quite standard for data analyses and visualisat
 ### Download and Addition of Dataset to Repository
 
 
-The CSV file of the Iris Fisher Dataset was retrieved from the UCI Machine Learning Repository and saved locally (3). The CSV file was read into our repository using the Pandas 'read_csv' method. Column names were added in order to provide some structre to the dataset to faciliate downstream manipulations. I also added 'cm' to each column name just to highlight the measurements were made in centimetres when compiling the data. I added this block of code in a try/except block to demonstrate further learning and also to confirm to the user their upload was successful.
+The CSV file of the Iris Fisher Dataset was retrieved from the UCI Machine Learning Repository and saved locally (3). The CSV file was read into our repository using the Pandas 'read_csv' method. Column names were added in order to provide some structure to the dataset to faciliate downstream manipulations. I also added 'cm' to each column name just to highlight the measurements were made in centimetres when compiling the data. I added this block of code in a try/except block to demonstrate further learning and also to confirm to the user their upload was successful.
 
 ```Python
 # Upload our dataset and add some structure to it (wrapped in try/except block)
@@ -226,7 +226,7 @@ plt.grid(ls = '--', lw = '0.1', color = '#BEBEBE', axis = 'y') # modifying grid 
 plt.savefig('sepalLengthHist.png') # saving output to specified .png file
 
 ```
-I leaned heavily on Seaborn and Matplotlib libraries for creating the histograms. I edited the features in order to make the histograms more aesthetically pleasing and therefore more accessible for the end-user. I set different axes limits for each histogram to aid their appearance and added 'y-axis' gridlines as I did not see the benefit of 'x-axis' gridlines. I removed the density line as it is not requested for the task and changed the 'alpha' setting (from it's default of 0.5) to alter the transparancy of the graph.
+I leaned heavily on Seaborn and Matplotlib libraries for creating the histograms. I edited the features in order to make the histograms more aesthetically pleasing and therefore more accessible for the end-user. I set different axes limits for each histogram to aid their appearance. I removed the density line as it is not requested for the task and changed the 'alpha' setting (from it's default of 0.5) to alter the transparancy of the graph.
 
 #### *Histogram Analyses*
 ![sepalLengthHist](https://i.imgur.com/i6X0u9V.png)
