@@ -1,18 +1,19 @@
-# Final program that outputs a summary of each variable to a single text file,
-# saves a histogram of each variable to png files, 
+# Final program that outputs a summary of each variable to a single text file, saves a histogram of each variable to png files, 
 # and outputs a scatter plot of each pair of variables.
+# GMIT Programming and Scripting Project2021 (analysis of Iris Fisher Datset)
 
 # Author: Conor McCaffrey
 
+# Importing required libraries
 import numpy as np
 import pandas as pd
 import sys
 import matplotlib as mpl
 import os
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches # needed for waffle charts
 import seaborn as sns
 import plotly.express as px
+from pywaffle import Waffle
 
 
 # Upload our dataset and add some structure to it. I've wrapped this in a try/except block to demonstrate knowledge and also to 
@@ -42,6 +43,22 @@ with open('variablesSummary.txt', 'w') as text_file: # creating a new .txt file 
     
 
 sys.stdout = original_stdout # Reset the standard output to its original value to avoid adding data we dont want to newly created file
+
+# Waffle Chart of Species Types
+df = pd.DataFrame({
+    'iris_Type': ['Setosa', 'Virginica', 'Versicolor'],
+    'Frequency': [50, 50, 50]
+})
+fig = plt.figure(
+    FigureClass=Waffle, 
+    rows=5,
+    values=df.Frequency,
+    labels=list(df.iris_Type),
+    legend={'loc': 'upper left', 'bbox_to_anchor': (1, 1)}
+
+)
+
+plt.savefig('waffleChart.png')
 
 # Histograms of each variable
 
