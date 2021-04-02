@@ -51,9 +51,9 @@ import sys
 import matplotlib as mpl
 import os
 import matplotlib.pyplot as plt
-import seaborn as sbn
-from PIL import Image # this lets us convert images into arrays
-import matplotlib.patches as mpatches # needed for waffle charts
+import seaborn as sns
+import plotly.express as px
+from pywaffle import Waffle
 ```
 The libraries I imported are all quite standard for data analyses and visualisation, with perhaps Image (from PIL) (6) and matplotlib.patches being the exception. I have imported these modules to have the option of creating arrays from images and waffle charts. I will decide later in the project if they are needed or not but just to have the option.
 
@@ -80,11 +80,6 @@ I thought of including some commented-out code that I could use to verify the da
 Now it is time to gain a high-level understanding of the data we have. The logical first step here then is to investigate the structure of our data and to calculate general statistical features such as mean, standard deviation, max/min values and interquartile ranges. We will also look at testing the robustness of our data in order to confirm we can carry out queries on the dataset. I included the newline character after each 'print' function in order to spearate the data to make it neater for the end-user.
 
 ```Python
-
-from uploadDataSet import data  # found this idea on kite.com (importing the output of one Python file into another Python file).
-# This wont be needed when compiling the final program but it's good to have now when performing separate tasks
-
-
 original_stdout = sys.stdout # Save a reference to the original standard output
 
 with open('variablesSummary.txt', 'w') as text_file: # creating a new .txt file called 'variablesSummary.txt' to store our results and referring to it as 'text_file'
@@ -208,6 +203,33 @@ The take-away points of this are:
 * We can see that there is a strong positive coorelation between Petal length and Petal width and no real correlation between Sepal length and Sepal width. This suggests that any major insights we find might be related to petals more so than sepals. We will see later on. 
   
 ### Visualisation of the Iris Fisher Dataset
+
+#### *Simple Waffle Chart of Species*
+
+Just to aid in the visualisation of the datset, I constructed a simple waffle chart demonstrating the distribution of the dataset betweeen each species type. The code was developed from reference 27 (27).
+
+```Python
+df = pd.DataFrame({
+    'iris_Type': ['Setosa', 'Virginica', 'Versicolor'],
+    'Frequency': [50, 50, 50]
+})
+
+
+fig = plt.figure(
+    FigureClass=Waffle, 
+    rows=5,
+    values=df.Frequency,
+    labels=list(df.iris_Type),
+    legend={'loc': 'upper left', 'bbox_to_anchor': (1, 1)}
+
+)
+
+plt.savefig('waffleChart.png')
+```
+
+![waffleChart](https://i.imgur.com/ZFB3D22.png)
+
+There is no new information to be garnered here, merely visualtion that we have an equal quantity of each of the iris species. 
 
 #### *Analysis of each variable through Histograms*
 
@@ -498,6 +520,10 @@ The take away points from this are:
     25. Like Geeks. (2019). Seaborn heatmap tutorial (Python Data Visualization) - Like Geeks. [online] Available at: https://likegeeks.com/seaborn-heatmap-tutorial/. [Accessed 30 Mar. 2021].
     
     26. GeeksforGeeks. (2020). How to increase the size of the annotations of a seaborn heatmap in Python? [online] Available at: https://www.geeksforgeeks.org/how-to-increase-the-size-of-the-annotations-of-a-seaborn-heatmap-in-python/ [Accessed 30 Mar. 2021].
+    
+    27. jonathansoma.com. Creating Waffle Charts in pandas. [online] Available at: http://jonathansoma.com/lede/foundations-2018/matplotlib/creating-waffle-charts-in-pandas/ [Accessed 2 Apr. 2021].
+
+
 
 
 
