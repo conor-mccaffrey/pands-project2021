@@ -522,6 +522,14 @@ The take away points from this are:
     26. GeeksforGeeks. (2020). How to increase the size of the annotations of a seaborn heatmap in Python? [online] Available at: https://www.geeksforgeeks.org/how-to-increase-the-size-of-the-annotations-of-a-seaborn-heatmap-in-python/ [Accessed 30 Mar. 2021].
     
     27. jonathansoma.com. Creating Waffle Charts in pandas. [online] Available at: http://jonathansoma.com/lede/foundations-2018/matplotlib/creating-waffle-charts-in-pandas/ [Accessed 2 Apr. 2021].
+    
+    28. plotly.com. 3D Scatter Plots. [online] Available at: https://plotly.com/python/3d-scatter-plots/ [Accessed 2 Apr. 2021].
+    
+    29. plotly.com. Legends. [online] Available at: https://plotly.com/python/legend/#legend-positioning [Accessed 2 Apr. 2021].
+
+
+
+
 
 
 
