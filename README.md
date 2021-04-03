@@ -468,7 +468,7 @@ The take away points from this are:
 
 
 #### *3D Scatter Plot of all Variables*
-As a summary of the work we have carried out, I thought it would be nice to produce a 3D scatterplot of each of our variables. This, in addition to the scatterplot overview produced earlier, would give a simple summation of the most intersting result we discerned from the data: the ability to distinguish between the iris setosa class and the virginica/versicolor classes. The code to produce this scatter plot was as follows: 
+As a summary of the work we have carried out, I thought it would be nice to produce a 3D scatterplot of each of our variables. This, in addition to the scatterplot overview produced earlier, would give a simple summation of the most interesting result we discerned from the data: the ability to distinguish between the iris setosa class and the virginica/versicolor classes. The code to produce this scatter plot was as follows: 
 
 ```Python
 
@@ -481,6 +481,8 @@ fig.write_image('variablesPlot3D.png', width=1800, height=900) # setting height 
 The code was compiled by consulting the plotly website (28) and the legend was re-positioned from the same source (29). A fourth dimension was added by setting the colour to 'PetalLength_cm', thereby altering the colour of each data  point on the basis of petal length.
 
 ![variablesPlot3D](https://i.imgur.com/RL3UO3z.png)
+
+While there is no new information here, we can once again see how the setosa class is separate from the virginica/versicolor classes. The png file of the result isn't as beneficial as the proper result but we can still discern our overall result from it.
 ## Conclusion
 
 ## References
