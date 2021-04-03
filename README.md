@@ -483,7 +483,11 @@ The code was compiled by consulting the plotly website (28) and the legend was r
 ![variablesPlot3D](https://i.imgur.com/RL3UO3z.png)
 
 While there is no new information here, we can once again see how the setosa class is separate from the virginica/versicolor classes. The png file of the result isn't as beneficial as the proper result but we can still discern our overall result from it.
+
+
 ## Conclusion
+
+
 
 ## References
     1. Yong, Cui 2020. The Iris Dataset — A Little Bit of History and Biology. [Online]. [17 March 2021]. Available from: https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5

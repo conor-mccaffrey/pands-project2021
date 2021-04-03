@@ -216,3 +216,11 @@ sns.heatmap(virginica.corr(), annot=True, cmap='YlGnBu' , cbar = True, linecolor
 ax1[2].set_title('Virginica', fontsize=30)
 
 fig.savefig('correlationSpecies.png')
+
+
+# 3D Scatter Plots
+
+fig = px.scatter_3d(data, x='SepalLength_cm', y='SepalWidth_cm', z='PetalWidth_cm',
+                    color='PetalLength_cm', symbol='Class') # compiled from reference 28
+fig.update_layout(legend=dict(yanchor="top", y=0.90, xanchor="left",x=0.2)) # positioning the legend so it is separate from the color bar chart (reference 29)
+fig.write_image('variablesPlot3D.png', width=1800, height=900) # setting height and width variables 
