@@ -466,6 +466,20 @@ The take away points from this are:
 * The slight positive correlation Sepal length/Petal length is maintained in the versicolor and virginica classes.
 * Setosa class once again diverges from the other iris classes in Sepal correlations.
 
+
+#### *3D Scatter Plot of all Variables*
+As a summary of the work we have carried out, I thought it would be nice to produce a 3D scatterplot of each of our variables. This, in addition to the scatterplot overview produced earlier, would give a simple summation of the most intersting result we discerned from the data: the ability to distinguish between the iris setosa class and the virginica/versicolor classes. The code to produce this scatter plot was as follows: 
+
+```Python
+fig = px.scatter_3d(data, x='SepalLength_cm', y='SepalWidth_cm', z='PetalWidth_cm',
+                    color='PetalLength_cm', symbol='Class') # compiled from reference 28
+fig.update_layout(legend=dict(yanchor="top", y=0.90, xanchor="left",x=0.2)) # positioning the legend so it is separate from the color bar chart (reference 29)
+fig.write_image('3DvariablesPlot.png', width=1800, height=900) # setting height and width variables 
+
+
+```
+The code was compiled by consulting the plotly website (28) and the legend was re-positioned from the same source (29). A fourth dimension was added by setting the colour to 'PetalLength_cm', thereby altering the colour of each data  point on the basis of petal length.
+
 ## Conclusion
 
 ## References
