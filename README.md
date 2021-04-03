@@ -28,7 +28,7 @@ I intend to use this dataset to demonstrate my knowledge of Python, gained throu
 
 The overall goal is to use these modules (and by extension, Python) to describe the Iris dataset in detail and, display visually, certain attributes of the data which I believe are important to highlight. By doing this I will also, in essence, provide evidence of the suitability of Python towards analysing large datasets.
 
-## Investigation of the Fisher's Iris Data Set  
+## 2) Investigation of the Fisher's Iris Data Set  
 
 ### Project Plan
 
@@ -478,18 +478,19 @@ fig.update_layout(legend=dict(yanchor="top", y=0.90, xanchor="left",x=0.2)) # po
 fig.write_image('variablesPlot3D.png', width=1800, height=900) # setting height and width variables 
 
 ```
-The code was compiled by consulting the plotly website (28) and the legend was re-positioned from the same source (29). A fourth dimension was added by setting the colour to 'PetalLength_cm', thereby altering the colour of each data  point on the basis of petal length.
+The code was compiled by consulting the plotly website (28) and the legend was re-positioned from the same source (29). A fourth dimension was added by setting the colour to 'PetalLength_cm', thereby altering the colour of each data point on the basis of petal length.
 
 ![variablesPlot3D](https://i.imgur.com/RL3UO3z.png)
 
-While there is no new information here, we can once again see how the setosa class is separate from the virginica/versicolor classes. The png file of the result isn't as beneficial as the proper result but we can still discern our overall result from it.
+While there is no new information here, we can once again see how the setosa class is separate from the virginica/versicolor classes. The png file of the result isn't as beneficial as the proper result (where you can move the scatterplot graph) but we can still discern our overall result from it.
 
 
-## Conclusion
+## 3) Conclusion
 
+The main take-away points of each body-of-work has been discussed at the end of each section so I want to use this conclusion to discuss the project as a whole and my approach to investigating the dataset. This README serves as my thought-process throughout the course of my investigative analyses and what paths I decided to follow. I thought it prudent to construct the boxplots, for example, upon seeing evidence from the histograms that we may have outliers. I feel (hope) this was the overall aim of the project: to enable critial thinking and problem solving. The results from the scatter plots (displaying setosa's divergence from virginica/versicolor) prompted me to focus the end of the project on the species as opposed to the variables. To this end, I constructed the correlation plots focusing on the species and also the 3D scatter plot. It was fascinating to see the differences in results when comparing the correlation plots by variables and the correlation plots by species. I did not expect to see this and it proves how it can be beneficial to really dive into the data as opposed to making assunptions based on high-level understanding of the data. 
+I feel I have displayed the applicability of using Python to investigate a dataset and also displayed my knowledge of Python to date. 
 
-
-## References
+## 4) References
     1. Yong, Cui 2020. The Iris Dataset — A Little Bit of History and Biology. [Online]. [17 March 2021]. Available from: https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
     
     2. Dam, Kerstin & Hafen, Ryan & Gibson, Tara & Critchlow, Terence. (2013). Power Grid Data Analysis with R and Hadoop. 10.1016/b978-0-12-411511-8.00001-3.
