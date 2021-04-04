@@ -4,8 +4,6 @@ import sys
 import matplotlib as mpl
 import os
 import matplotlib.pyplot as plt
-from PIL import Image # this lets us convert images into arrays
-import matplotlib.patches as mpatches # needed for waffle charts
 
 
 # Upload our dataset and add some structure to it. I've wrapped this in a try/except block to demonstrate knowledge and also to 
