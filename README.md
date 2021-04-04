@@ -233,7 +233,7 @@ There is no new information to be garnered here, merely visualtion that we have 
 
 #### *Analysis of each variable through Histograms*
 
-The next step is to be able to visually inspect our data. To achieve this, histograms of each variable (Sepal length/width, Petal length/width) were created. The histograms displayed the ranges (in cm) of each variable plotted against the frequencies. This provides additional information about the variance of the data across each variable. An example of the code is as follows : 
+The next step is to be able to visually inspect our data. To achieve this, histograms of each variable (Sepal length/width, Petal length/width) were created. The histograms displayed the ranges (in cm) of each variable plotted against the frequencies. This provides additional information about the distribution of the data across each variable. An example of the code is as follows : 
 
 ```Python
 
@@ -276,7 +276,7 @@ The take-away points of this are:
 
 #### *Correlation Map of Data for Statistical Summary* 
 
-In order to aid in the visualisation of the correlation data from our 'variablesSummary.txt' output, it is wise to construct a heatmap of the correlation data. This was heavily drawn on Seaborn.pydata.org (reference 14). The heatmap produced provides a visual summary of the 'corr()' method output previously attained.
+In order to aid in the visualisation of the correlation data from our 'variablesSummary.txt' output, it is wise to construct a heatmap of the correlation data. This was heavily drawn on Seaborn.pydata.org (reference 14). The resulting heatmap provides a visual summary of the 'corr()' method output previously attained.
 
 ```Python
 
