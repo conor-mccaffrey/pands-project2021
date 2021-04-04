@@ -55,7 +55,7 @@ import seaborn as sns
 import plotly.express as px
 from pywaffle import Waffle
 ```
-The libraries I imported are all quite standard for data analyses and visualisation. I have imported these modules to have the option of creating arrays from images and waffle charts. I will decide later in the project if they are needed or not but just to have the option.
+The libraries I imported are all quite standard for data analyses and visualisation. I have imported these modules to have the option of creating arrays from images and waffle charts. I considered importing modules such as Image (from PIL (6)) but then consisidered it's applicibality towards this dataset. I will decide later in the project if they are needed or not but just to have the option.
 
 ### Download and Addition of Dataset to Repository
 
