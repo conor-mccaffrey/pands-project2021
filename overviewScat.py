@@ -2,7 +2,6 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-from pandas.core.base import DataError
 import seaborn as sns
 
 from uploadDataSet import data # importing dataset
