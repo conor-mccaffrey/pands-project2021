@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import sys
 import matplotlib as mpl
-import os
 import matplotlib.pyplot as plt
 
 
