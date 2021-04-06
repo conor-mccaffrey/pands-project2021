@@ -57,7 +57,7 @@ from pywaffle import Waffle
 ```
 The libraries I imported are all quite standard for data analyses and visualisation. I have imported these modules to have the option of creating arrays from images and waffle charts. I considered importing modules such as Image (from PIL (6)) but then decided not to as I couldn't truely justify it's applicibality towards this dataset. I will decide later in the project if they are needed or not but just to have the option.
 
-### Download and Addition of Dataset to Repository
+### Download and Addition of the Dataset to Repository
 
 
 The CSV file of the Iris Fisher Dataset was retrieved from the UCI Machine Learning Repository and saved locally (3). The CSV file was read into our repository using the Pandas 'read_csv' method. Column names were added in order to provide some structure to the dataset to faciliate downstream manipulations. I also added 'cm' to each column name just to highlight the measurements were made in centimetres when compiling the data. I added this block of code in a try/except block to demonstrate further learning and also to confirm to the user their upload was successful.
