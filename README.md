@@ -276,7 +276,7 @@ The take-away points of this are:
 
 #### *Correlation Map of Data for Statistical Summary* 
 
-In order to aid in the visualisation of the correlation data from our 'variablesSummary.txt' output, it is wise to construct a heatmap of the correlation data. This was heavily drawn on Seaborn.pydata.org (reference 14). The resulting heatmap provides a visual summary of the 'corr()' method output previously attained.
+In order to aid in the visualisation of the correlation data from our 'variablesSummary.txt' output, it is wise to construct a heatmap of the correlation data. This was heavily drawn on 'Seaborn.pydata.org' (reference 14). The resulting heatmap provides a visual summary of the 'corr()' method output previously attained.
 
 ```Python
 
