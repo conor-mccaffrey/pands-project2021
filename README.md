@@ -258,7 +258,7 @@ I leaned heavily on Seaborn and Matplotlib libraries for creating the histograms
 
 The above histograms display the results for Sepal and Petal data. It is immediately noticable that the tabular statistical summary we produced earlier does not tell the full story and the benefits of the histograms are clear. We can see how the distribution of the data differs between Sepal and Petal. This ties in with our findings on the standard deviation in the statistical summary. The data variance is much less pronounced in the Sepal data. We can clearly see outliers in the Petal data which may warrent further invesitgation down the line. These outliers in Petal data may be skewing the mean and median also to an extent. The Sepal width data depicts what appears to be almost perfect Gaussian distibution. This is unsurprising as the Sepal width data also has the lowest value for standard deviation. 
 
-#### *Subplot of all histograms*
+#### *Subplot of all histograms in Dataset*
 
 For clarity's sake, I also compiled a program that would display histograms of all the variants so far in one output. This can be good for a quick overview of the data. 
 
