@@ -1,6 +1,6 @@
 # Product a heatmap of correlations between variables
 
-from uploadDataSet import data 
+from uploadDataSet import data # Not needed for final program
 import seaborn as sns
 import matplotlib.pyplot as plt
 
