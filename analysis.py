@@ -1,5 +1,5 @@
 # Final program that outputs a summary of each variable to a single text file, saves a histogram of each variable to png files, 
-# and outputs a scatter plot of each pair of variables.
+# and outputs a scatter plot of each pair of variables as per requirements.
 # GMIT Programming and Scripting Project2021 (analysis of Iris Fisher Datset)
 
 # Author: Conor McCaffrey
@@ -44,7 +44,7 @@ with open('variablesSummary.txt', 'w') as text_file: # creating a new .txt file 
 
 sys.stdout = original_stdout # Reset the standard output to its original value to avoid adding data we dont want to newly created file
 
-# Waffle Chart of Species Types
+# Waffle Chart of Species Types for overview of species numbers
 df = pd.DataFrame({
     'iris_Type': ['Setosa', 'Virginica', 'Versicolor'],
     'Frequency': [50, 50, 50]
