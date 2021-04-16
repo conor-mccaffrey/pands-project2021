@@ -11,7 +11,7 @@ data.columns = ['SepalLength_cm','SepalWidth_cm','PetalLength_cm','PetalWidth_cm
 fig, ax1 = plt.subplots(3,2, figsize=(25,20)) # adapted from kaggle.com (reference 22)
 fig.suptitle('Scatterplots of Iris Fisher Data Variables', style = 'italic', size = 25) # Overall title and editing font for appearance
 
-sns.set(font_scale=1.2) # increasing size of legend (23)
+sns.set(font_scale=1.2) # increasing size of legend (reference 23)
 
 # 1st plot
 sns.scatterplot(data=data, x='SepalLength_cm', y='SepalWidth_cm', hue='Class', ax=ax1[0, 0]) 
