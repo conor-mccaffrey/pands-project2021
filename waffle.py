@@ -1,6 +1,6 @@
 # Waffle Chart of Species Types
+# importing all necessary libraries
 
-# importing all necessary requirements
 import pandas as pd
 import matplotlib.pyplot as plt
 from pywaffle import Waffle
