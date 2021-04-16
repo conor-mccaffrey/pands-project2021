@@ -19,8 +19,8 @@ with open('variablesSummary.txt', 'w') as text_file: # creating a new .txt file 
     print(data.info(), '\n') # print basic info on our dataset such as structure and datatypes, end with a newline character to separate next set of data
     print("Instances of each sample type") # for clarity
     print(data["Class"].value_counts(), '\n') # Number of instances in each class (obtained from reference 8)
-    print(data.head(8), '\n') # print 8 top rows in dataset
-    print(data.sample(20), '\n')  # print 20 random samples
+    print(data.head(8), '\n') # printing 8 top rows in dataset
+    print(data.sample(20), '\n')  # printing 20 random samples
     print(data.describe(), '\n') # This will output basic exploratory analyses (statistial summaries) of the dataset.
     print(data.corr()) # This will display the correlation betweeen each variable
     
