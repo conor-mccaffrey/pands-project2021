@@ -1,7 +1,5 @@
 # Testing for Outliers using BoxPlots
 
-import os
-import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.stats as stats
