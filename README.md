@@ -37,7 +37,7 @@ To maintain structure and organisation during the project, I have set out a proj
     1. Create a repository on GitHub which I will clone onto Visual Studio as outlined during Week01 of the module, using SSH. I will call the repository 'pands-project2021' as requested.
     2. I will download the data for Fisher's Iris Data Set from the UCI Machine Learning Repository (http://archive.ics.uci.edu/ml/datasets/Iris) and add it to my repository using the Pandas 'read_csv' atttribute.
     3. I will carry out exploratory research on the dataset to familiarise myself with the data and it's potential for Python analysis and reference all items I extract information from.
-    4. I will then consider what type of analysis is relavant for this data set and investigate how to carry it out, drawing on various resources which will be referenced. This work will be stored in various different files.
+    4. I will then consider what type of analyses is relavant for this data set and investigate how to carry it out, drawing on various resources which will be referenced. This work will be stored in various different files.
     5. I will update the README file as I progress, and then compile all my work into a program called 'analysis.py'
 
 ### Importing Libraries
