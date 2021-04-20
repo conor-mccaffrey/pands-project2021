@@ -14,9 +14,9 @@ I have structured the README file as follows:
     3. Conclusion
     4. References
 
-## 1) Overview of Iris Dataset, it's attributes, and it's application to Python
+## 1) Overview of Iris Dataset, it's attributes and it's application to Python
 
-The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher (1). The dataset was described in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attributing the actual collection of the data to Dr. Edgar Anderson (1). The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' (2). It is important to note that these measurements are in centimetres (cm). One class (sertosa) is linerally separable from the other two classes (3). We will display this in our investigation. 
+The Iris Fisher Dataset was first created in 1936 by Sir Ronald Aylmer Fisher (1). The dataset was described in his landmark paper 'The Use of Multiple Measurements in Taxonomic Problems' (1936), attributing the actual collection of the data to Dr. Edgar Anderson (1). The Iris Dataset is essentially a multivariate dataset, containing 150 measurements of iris petal and sepal lengths and widths, with 50 measurements for each of the species 'setosa','versicolor' and 'virginica' (2). It is important to note that these measurements are in centimetres (cm). One class (sertosa) is linerally separable from the other two classes (3). We will display this fact through Python in our investigation. 
 
 The measurements obtained were used to create a linear discriminant model to classify the species (4). The dataset has become commonplace in computer science, in particlar pattern recognition literature and data visualisations (3). The Iris Fisher Dataset has been used for data analyses so frequently that it can be accessed without needing to find a source, through both R and Python in the machine-learning (ML) package Scikit-learn (5). Further demonstrating the modern application of the Iris dataset, it is being increasingly incorporated into advances in machine learning (ML) teachings (10,11). 
 
