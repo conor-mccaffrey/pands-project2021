@@ -1,4 +1,4 @@
-# Project for Programming and Scripting module GMIT 2021 (pands-project 2021)
+# Project for Programming and Scripting module GMIT Data Analytics 2021 (pands-project 2021)
 ## Author : Conor McCaffrey
 ![Iris_Flower](https://i.imgur.com/v3zQOXw.jpg)
 
