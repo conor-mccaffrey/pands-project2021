@@ -1,7 +1,7 @@
 # 3D Scatter Plots
 
 import plotly.express as px  # new library
-from uploadDataSet import data # won't be required for main program
+from uploadDataSet import data # won't be required for main program similar to other programs made
 
 
 fig = px.scatter_3d(data, x='SepalLength_cm', y='SepalWidth_cm', z='PetalWidth_cm',
